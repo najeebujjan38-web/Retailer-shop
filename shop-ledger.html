@@ -1,0 +1,3033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="color-scheme" content="light dark">
+    <meta name="color-scheme" content="light dark" id="colorSchemeMeta">
+    <title>Shop Ledger</title>
+    <meta name="theme-color" content="#f2f7f5" id="themeColorMeta">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Shop Ledger">
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIlNob3AgTGVkZ2VyIiwgInNob3J0X25hbWUiOiAiU2hvcCBMZWRnZXIiLCAic3RhcnRfdXJsIjogIi4iLCAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwgImJhY2tncm91bmRfY29sb3IiOiAiI2YyZjdmNSIsICJ0aGVtZV9jb2xvciI6ICIjZjJmN2Y1IiwgImljb25zIjogW3sic3JjIjogImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBTUFBQUFEQUNBSUFBQURkdnZ0UUFBQUtka2xFUVZSNG5PM2RmWEFVOVIzSDhkL2U4K1V1bHljSUpEd1lBNFluQStGWkVVTENDS1ZGcUlnT2lHRFJnWUlkcDB4bkJJcFVLNTBLMHRwMjJzNDRLbUpwUzBWd21JNUlXMmltUkJTUVVpakVXSkZBZUFvUUVyZzhYTzV5ejdmOUl6T1pqSEs1M2YzdTN1VzM5M245aWNuZG10LzdmdnZiMjcwOW9iQndMQU5ReXBEcURRQytJU0FnUVVCQWdvQ0FCQUVCQ1FJQ0VnUUVKQWdJU0JBUWtDQWdJRUZBUUlLQWdBUUJBUWtDQWhKVHFqZUFuWGhqY0tvM2dXTVAvT0I2YWpkQVNNbjFRSWhHQ3ltSktha0JvWnZrU0daSlNRb0k2U1JmY2pMU1BDQ2trMXBhWjZSaFFFaW43OUF1STYwTzQxRlBuNkxkY0dnU0VPcnBnelFhRkpWM1lVaW43MU4zZDZibURJUjZ1S0R1TUtrV0VPcmhpSXFEcFU1QXFJYzdhZzBaVHFZQ2lRb0JZZnJoaENvRFJ3MEk5WENOUG55a2dGQ1BEaEFIRVdzZ0lGRWVFS1lmM2FBTUpXWWdJRkVZRUtZZm5WRThvSmlCZ0VSSlFKaCtkRW5ac0dJR0FoSUVCQ1N5QThMK1M4Y1VEQzVtSUNCQlFFQ0NnSUJFWGtCWUFPbWUzQ0hHREFRa0NBaElFQkNRSUNBZ1FVQkFnb0NBQkFFQkNRSUNFZ1FFSkFnSVNCQVFrUEFmZFlqMzVoU0Nib1lBQUFBQVNVVk9SSzVDWUlJPSIsICJzaXplcyI6ICIxOTJ4MTkyIiwgInR5cGUiOiAiaW1hZ2UvcG5nIn1dfQ==">
+    <link rel="icon" href="data:image/png;base64,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">
+    <link rel="apple-touch-icon" href="data:image/png;base64,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">
+    <style>
+        :root,
+        html[data-theme="emerald"] {
+            color-scheme: light;
+            --bg: #f2f7f5;
+            --bg-elevated: #ffffff;
+            --surface: rgba(15, 118, 89, 0.05);
+            --surface-hover: rgba(15, 118, 89, 0.09);
+            --border: rgba(15, 60, 48, 0.10);
+            --border-strong: rgba(15, 60, 48, 0.20);
+            --text: #163832;
+            --text-dim: #5d7a72;
+            --gold: #12a37e;
+            --gold-soft: rgba(18, 163, 126, 0.12);
+            --gold-glow: rgba(18, 163, 126, 0.22);
+            --on-accent: #ffffff;
+            --green: #17a463;
+            --green-soft: rgba(23, 164, 99, 0.12);
+            --red: #e0524a;
+            --red-soft: rgba(224, 82, 74, 0.10);
+            --blue: #2f7fd1;
+            --blue-soft: rgba(47, 127, 209, 0.12);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --card-border-width: 1px;
+            --title-weight: 700;
+            --title-tracking: 0.6px;
+            --shadow-card: 0 2px 10px rgba(20, 50, 42, 0.07);
+            --shadow-pop: 0 16px 40px rgba(20, 50, 42, 0.18);
+            --shadow-bar: 0 -4px 20px rgba(20, 50, 42, 0.08);
+        }
+        html[data-theme="ocean"] {
+            color-scheme: light;
+            --bg: #eef6fb;
+            --bg-elevated: #ffffff;
+            --surface: rgba(19, 92, 140, 0.05);
+            --surface-hover: rgba(19, 92, 140, 0.09);
+            --border: rgba(13, 51, 77, 0.10);
+            --border-strong: rgba(13, 51, 77, 0.20);
+            --text: #0e3852;
+            --text-dim: #5a7e93;
+            --gold: #1f8fd6;
+            --gold-soft: rgba(31, 143, 214, 0.12);
+            --gold-glow: rgba(31, 143, 214, 0.22);
+            --on-accent: #ffffff;
+            --green: #14ab8c;
+            --green-soft: rgba(20, 171, 140, 0.12);
+            --red: #e0605a;
+            --red-soft: rgba(224, 96, 90, 0.10);
+            --blue: #6a5fd6;
+            --blue-soft: rgba(106, 95, 214, 0.12);
+            --radius-sm: 12px;
+            --radius-md: 18px;
+            --radius-lg: 24px;
+            --card-border-width: 1px;
+            --title-weight: 700;
+            --title-tracking: 0.2px;
+            --shadow-card: 0 4px 16px rgba(10, 40, 60, 0.09);
+            --shadow-pop: 0 20px 48px rgba(10, 40, 60, 0.2);
+            --shadow-bar: 0 -4px 20px rgba(10, 40, 60, 0.08);
+        }
+        html[data-theme="sunset"] {
+            color-scheme: light;
+            --bg: #fdf5ef;
+            --bg-elevated: #ffffff;
+            --surface: rgba(180, 83, 43, 0.05);
+            --surface-hover: rgba(180, 83, 43, 0.09);
+            --border: rgba(90, 45, 25, 0.14);
+            --border-strong: rgba(90, 45, 25, 0.26);
+            --text: #4a2a1c;
+            --text-dim: #8a6a58;
+            --gold: #e0663d;
+            --gold-soft: rgba(224, 102, 61, 0.12);
+            --gold-glow: rgba(224, 102, 61, 0.22);
+            --on-accent: #ffffff;
+            --green: #2a9d6f;
+            --green-soft: rgba(42, 157, 111, 0.12);
+            --red: #d2453f;
+            --red-soft: rgba(210, 69, 63, 0.10);
+            --blue: #a45fb8;
+            --blue-soft: rgba(164, 95, 184, 0.12);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 14px;
+            --card-border-width: 2px;
+            --title-weight: 800;
+            --title-tracking: 0.8px;
+            --shadow-card: 0 2px 10px rgba(80, 40, 20, 0.08);
+            --shadow-pop: 0 16px 40px rgba(80, 40, 20, 0.2);
+            --shadow-bar: 0 -4px 20px rgba(80, 40, 20, 0.1);
+        }
+        html[data-theme="midnight"] {
+            color-scheme: dark;
+            --bg: #0b0e17;
+            --bg-elevated: #12172a;
+            --surface: rgba(255, 255, 255, 0.045);
+            --surface-hover: rgba(255, 255, 255, 0.07);
+            --border: rgba(255, 255, 255, 0.09);
+            --border-strong: rgba(255, 255, 255, 0.16);
+            --text: #f3f5f9;
+            --text-dim: #93a0b8;
+            --gold: #d9ad4f;
+            --gold-soft: rgba(217, 173, 79, 0.14);
+            --gold-glow: rgba(217, 173, 79, 0.25);
+            --on-accent: #1a1408;
+            --green: #3ddc97;
+            --green-soft: rgba(61, 220, 151, 0.14);
+            --red: #f2685f;
+            --red-soft: rgba(242, 104, 95, 0.14);
+            --blue: #5b9cf6;
+            --blue-soft: rgba(91, 156, 246, 0.14);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --card-border-width: 1px;
+            --title-weight: 700;
+            --title-tracking: 0.6px;
+            --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.3);
+            --shadow-pop: 0 16px 40px rgba(0, 0, 0, 0.6);
+            --shadow-bar: 0 -4px 20px rgba(0, 0, 0, 0.4);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background:
+                radial-gradient(circle at 15% 0%, var(--gold-soft), transparent 40%),
+                var(--bg);
+            color: var(--text);
+            padding-bottom: calc(74px + env(safe-area-inset-bottom, 0px));
+            min-height: 100vh;
+            line-height: 1.4;
+            -webkit-font-smoothing: antialiased;
+            transition: background 0.25s, color 0.25s;
+        }
+        ::selection {
+            background: var(--gold-soft);
+        }
+        .header {
+            background: var(--bg-elevated);
+            padding: 16px 18px;
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 1px 0 var(--gold-glow);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+        }
+        .header input {
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+            width: 100%;
+            outline: none;
+        }
+        .header input::placeholder {
+            color: var(--text-dim);
+            font-weight: 600;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            background: var(--bg-elevated);
+            padding: 12px 8px;
+            font-size: 11px;
+            color: var(--text-dim);
+            border-bottom: 1px solid var(--border);
+        }
+        .stats > div {
+            flex: 1;
+            text-align: center;
+            padding: 0 4px;
+            border-right: 1px solid var(--border);
+        }
+        .stats > div:last-child {
+            border-right: none;
+        }
+        .stats span {
+            display: block;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text);
+            margin-top: 3px;
+            letter-spacing: 0.2px;
+        }
+        .stats .gold {
+            color: var(--gold);
+        }
+        .stats .green {
+            color: var(--green);
+        }
+        .stats .red {
+            color: var(--red);
+        }
+        .container {
+            max-width: 560px;
+            margin: 0 auto;
+            padding: 14px 14px 4px;
+        }
+        @media (min-width: 640px) {
+            .container {
+                max-width: 620px;
+                padding: 20px 20px 4px;
+            }
+            .header, .stats {
+                padding-left: max(18px, calc((100% - 620px) / 2 + 18px));
+                padding-right: max(18px, calc((100% - 620px) / 2 + 18px));
+            }
+        }
+        .card {
+            background: var(--surface);
+            border: var(--card-border-width) solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            margin-bottom: 12px;
+            box-shadow: var(--shadow-card);
+            transition: border-radius 0.2s, box-shadow 0.2s;
+        }
+        .card-title {
+            font-size: 13px;
+            font-weight: var(--title-weight);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: var(--title-tracking);
+            color: var(--text-dim);
+        }
+        input,
+        select {
+            width: 100%;
+            padding: 11px 13px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--text);
+            font-size: 14.5px;
+            outline: none;
+            font-family: inherit;
+            transition: border-color 0.15s, background 0.15s;
+        }
+        input:focus,
+        select:focus {
+            border-color: var(--gold);
+            background: var(--gold-soft);
+        }
+        input::placeholder {
+            color: var(--text-dim);
+        }
+        select option {
+            background: var(--bg-elevated);
+        }
+        .field {
+            margin-top: 12px;
+        }
+        .field label {
+            display: block;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-dim);
+            margin-bottom: 5px;
+            letter-spacing: 0.2px;
+        }
+        .btn {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: transform 0.08s, opacity 0.15s, filter 0.15s;
+            font-family: inherit;
+            letter-spacing: 0.2px;
+        }
+        .btn:active {
+            transform: scale(0.98);
+            filter: brightness(0.92);
+        }
+        .btn-primary {
+            background: var(--gold);
+            background: linear-gradient(135deg, color-mix(in srgb, var(--gold) 78%, white), var(--gold));
+            color: var(--on-accent);
+        }
+        .btn-success {
+            background: var(--green);
+            background: linear-gradient(135deg, color-mix(in srgb, var(--green) 78%, white), var(--green));
+            color: var(--on-accent);
+        }
+        .btn-danger {
+            background: var(--red);
+            background: linear-gradient(135deg, color-mix(in srgb, var(--red) 78%, white), var(--red));
+            color: var(--on-accent);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--text-dim);
+            border: 1px solid var(--border-strong);
+        }
+        .btn-outline:active {
+            background: var(--surface-hover);
+        }
+        .btn-small {
+            width: auto;
+            padding: 7px 12px;
+            font-size: 11px;
+            margin-top: 0;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+        @media (max-width: 340px) {
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 11px 13px;
+            background: var(--surface);
+            border-radius: var(--radius-sm);
+            margin-bottom: 6px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: border-color 0.15s, background 0.15s;
+        }
+        .result-item:hover, .result-item:active {
+            border-color: var(--gold);
+            background: var(--gold-soft);
+        }
+        .result-item .price {
+            color: var(--gold);
+            font-weight: 700;
+            white-space: nowrap;
+            padding-left: 10px;
+        }
+        .result-item .stock-tag {
+            font-size: 10px;
+            color: var(--text-dim);
+            display: block;
+            margin-top: 2px;
+        }
+        .stock-low {
+            color: var(--red) !important;
+            font-weight: 700;
+        }
+        .search-results {
+            max-height: 200px;
+            overflow-y: auto;
+            margin-top: 10px;
+        }
+        .search-wrap {
+            position: relative;
+        }
+        .search-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            margin-top: 8px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-strong);
+            border-radius: var(--radius-md);
+            max-height: 260px;
+            overflow-y: auto;
+            z-index: 30;
+            box-shadow: var(--shadow-pop);
+            padding: 7px;
+        }
+        .search-dropdown .result-item {
+            margin-bottom: 5px;
+        }
+        .search-dropdown .result-item:last-child {
+            margin-bottom: 0;
+        }
+        .selected-panel {
+            margin-top: 14px;
+            padding: 16px;
+            border: 1px solid var(--green);
+            border-radius: var(--radius-md);
+            background: var(--green-soft);
+        }
+        .selected-panel .pname {
+            font-size: 17px;
+            font-weight: 700;
+        }
+        .selected-panel .pinfo {
+            font-size: 12px;
+            color: var(--text-dim);
+            margin: 5px 0 12px;
+        }
+        .selected-panel .pinfo button {
+            background: none;
+            border: none;
+            color: var(--gold);
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 12px;
+            font-family: inherit;
+        }
+        .amount-input {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+        .row-line {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 13px;
+        }
+        .row-line:last-child {
+            border-bottom: none;
+        }
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 13px;
+            gap: 8px;
+        }
+        .list-item:last-child {
+            border-bottom: none;
+        }
+        .list-item .left {
+            flex: 1;
+            cursor: pointer;
+            min-width: 0;
+        }
+        .list-item .name {
+            font-weight: 600;
+            overflow-wrap: anywhere;
+        }
+        .list-item .sub {
+            font-size: 11px;
+            color: var(--text-dim);
+            margin-top: 2px;
+        }
+        .list-item .right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+        .del-btn, .edit-btn, .bill-btn, .restock-btn {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .del-btn {
+            color: var(--red);
+        }
+        .del-btn:active {
+            background: var(--red-soft);
+        }
+        .edit-btn {
+            color: var(--blue);
+        }
+        .edit-btn:active {
+            background: var(--blue-soft);
+        }
+        .bill-btn {
+            color: var(--gold);
+        }
+        .bill-btn:active {
+            background: var(--gold-soft);
+        }
+        .restock-btn {
+            color: var(--green);
+        }
+        .restock-btn:active {
+            background: var(--green-soft);
+        }
+        .profit-pos {
+            color: var(--green);
+            font-weight: 700;
+        }
+        .profit-neg {
+            color: var(--red);
+            font-weight: 700;
+        }
+        .empty-state {
+            text-align: center;
+            padding: 24px 12px;
+            color: var(--text-dim);
+            font-size: 13px;
+        }
+        .loading-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-dim);
+            font-size: 14px;
+        }
+        .spinner {
+            width: 28px;
+            height: 28px;
+            border: 3px solid var(--gold-soft);
+            border-top-color: var(--gold);
+            border-radius: 50%;
+            margin: 0 auto 12px;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .type-toggle {
+            display: flex;
+            gap: 8px;
+            margin: 10px 0 4px;
+        }
+        .type-toggle button {
+            flex: 1;
+            padding: 9px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-strong);
+            background: transparent;
+            color: var(--text-dim);
+            font-weight: 600;
+            font-size: 12px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .type-toggle .active-credit {
+            border-color: var(--red);
+            color: var(--red);
+            background: var(--red-soft);
+        }
+        .type-toggle .active-payment {
+            border-color: var(--green);
+            color: var(--green);
+            background: var(--green-soft);
+        }
+        .customer-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 11px 13px;
+            background: var(--surface);
+            border-radius: var(--radius-sm);
+            margin-bottom: 6px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: border-color 0.15s;
+        }
+        .customer-row:hover, .customer-row:active {
+            border-color: var(--gold);
+        }
+        .customer-row .cname {
+            font-weight: 600;
+        }
+        .customer-row .cbal {
+            font-weight: 700;
+        }
+        .filter-bar {
+            display: flex;
+            gap: 7px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+        .filter-bar input {
+            flex: 1;
+            padding: 7px 10px;
+            font-size: 12px;
+            min-width: 100px;
+        }
+        .filter-bar button {
+            padding: 7px 13px;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 11px;
+            cursor: pointer;
+            background: var(--gold);
+            color: var(--on-accent);
+            font-family: inherit;
+        }
+        .date-range {
+            display: flex;
+            gap: 7px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .date-range input {
+            flex: 1;
+            min-width: 100px;
+            padding: 7px 10px;
+            font-size: 12px;
+        }
+        .date-range button {
+            padding: 7px 13px;
+            border: 1px solid var(--border-strong);
+            border-radius: var(--radius-sm);
+            background: transparent;
+            color: var(--text);
+            cursor: pointer;
+            font-size: 11px;
+            font-family: inherit;
+        }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 12px;
+        }
+        .stat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 12px 10px;
+            text-align: center;
+        }
+        .stat-card .label {
+            font-size: 10px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+        .stat-card .value {
+            font-size: 17px;
+            font-weight: 700;
+            margin-top: 4px;
+        }
+        .stat-card.gold .value {
+            color: var(--gold);
+        }
+        .stat-card.green .value {
+            color: var(--green);
+        }
+        .stat-card.red .value {
+            color: var(--red);
+        }
+        .section-label {
+            font-weight: 700;
+            font-size: 13px;
+            margin: 16px 0 8px 2px;
+            color: var(--text);
+        }
+        .rank-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--gold-soft);
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 700;
+            margin-right: 8px;
+        }
+        .tabbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg-elevated);
+            backdrop-filter: blur(12px);
+            display: flex;
+            justify-content: center;
+            padding: 8px max(4px, env(safe-area-inset-left)) calc(8px + env(safe-area-inset-bottom, 0px)) max(4px, env(safe-area-inset-right));
+            border-top: 1px solid var(--border);
+            z-index: 50;
+            box-shadow: var(--shadow-bar);
+        }
+        .tab-btn {
+            background: none;
+            border: none;
+            color: var(--text-dim);
+            font-size: 9.5px;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            padding: 6px 4px;
+            cursor: pointer;
+            font-family: inherit;
+            border-radius: var(--radius-sm);
+            flex: 1;
+            max-width: 90px;
+            transition: color 0.15s, background 0.15s;
+        }
+        .tab-btn .icon {
+            font-size: 17px;
+        }
+        .tab-btn.active {
+            color: var(--gold);
+            background: var(--gold-soft);
+        }
+        .toast {
+            position: fixed;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(15, 18, 30, 0.96);
+            padding: 11px 22px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            z-index: 400;
+            border: 1px solid var(--border-strong);
+            box-shadow: var(--shadow-pop);
+            animation: fadeIn 0.3s, fadeOut 2.5s forwards 0.3s;
+            max-width: 90%;
+            text-align: center;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        .bill-modal, .confirm-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(4, 6, 12, 0.72);
+            backdrop-filter: blur(2px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 300;
+            padding: 20px;
+            animation: fadeIn 0.15s;
+        }
+        .confirm-modal {
+            z-index: 500;
+        }
+        .bill-content {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-strong);
+            border-radius: var(--radius-lg);
+            max-width: 360px;
+            width: 100%;
+            padding: 20px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-pop);
+            color: var(--text);
+        }
+        .confirm-content {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-strong);
+            border-radius: var(--radius-lg);
+            max-width: 320px;
+            width: 100%;
+            padding: 22px 20px 20px;
+            box-shadow: var(--shadow-pop);
+            text-align: center;
+            color: var(--text);
+        }
+        .confirm-content .confirm-msg {
+            font-size: 14.5px;
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+        .confirm-content input {
+            margin-bottom: 6px;
+            text-align: center;
+        }
+        .confirm-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 4px;
+        }
+        .confirm-actions .btn {
+            margin-top: 0;
+        }
+        .bill-content .bill-header {
+            text-align: center;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .bill-content .bill-header h2 {
+            font-size: 19px;
+            color: var(--gold);
+        }
+        .bill-content .bill-header p {
+            font-size: 11px;
+            color: var(--text-dim);
+        }
+        .bill-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 12px;
+        }
+        .bill-row.total {
+            font-weight: 700;
+            font-size: 15px;
+            border-bottom: 2px solid var(--gold);
+            margin-top: 8px;
+            padding-top: 8px;
+        }
+        .bill-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 14px;
+            flex-wrap: wrap;
+        }
+        .bill-actions button {
+            flex: 1;
+            min-width: 90px;
+        }
+        @media print {
+            .bill-modal {
+                position: static;
+                background: #fff;
+                padding: 0;
+            }
+            .bill-content {
+                background: #fff;
+                color: #000;
+                border: none;
+            }
+            .bill-content .bill-header h2 {
+                color: #000;
+            }
+            .bill-content .bill-header p {
+                color: #666;
+            }
+            .bill-row {
+                border-color: #ddd;
+                color: #000;
+            }
+            .bill-row.total {
+                border-color: #000;
+            }
+            .bill-actions {
+                display: none;
+            }
+            .tabbar,
+            .header,
+            .stats {
+                display: none;
+            }
+            body {
+                background: #fff;
+                padding: 20px;
+            }
+        }
+        .scrollable {
+            max-height: 320px;
+            overflow-y: auto;
+        }
+        .save-indicator {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--green);
+            text-align: center;
+            padding: 5px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .save-indicator.show {
+            opacity: 1;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="loginScreen" style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;">
+        <div class="card" style="max-width:340px;width:100%;">
+            <div style="text-align:center;margin-bottom:16px;">
+                <div style="font-size:32px;">🔐</div>
+                <div class="card-title" style="font-size:16px;text-transform:none;letter-spacing:0;margin-top:6px;" id="loginTitle">Shop Ledger — Sign In</div>
+            </div>
+            <div class="field"><label>Email</label><input type="email" id="loginEmail" autocomplete="username" placeholder="you@example.com"></div>
+            <div class="field"><label>Password</label><input type="password" id="loginPassword" autocomplete="current-password" placeholder="••••••••"></div>
+            <button class="btn btn-primary" id="loginSubmitBtn" onclick="window.handleLogin()">Sign In</button>
+            <p id="loginError" style="color:var(--red);font-size:12px;margin-top:8px;text-align:center;"></p>
+            <p style="text-align:center;font-size:12px;color:var(--text-dim);margin-top:14px;">
+                <span id="loginModeText">Pehli baar use kar rahe hain?</span>
+                <a href="#" onclick="window.toggleLoginMode();return false;" style="color:var(--gold);font-weight:700;text-decoration:none;" id="loginModeLink">Account Banayein</a>
+            </p>
+            <p style="text-align:center;font-size:11px;margin-top:6px;"><a href="#" onclick="window.handleForgotPassword();return false;" style="color:var(--text-dim);text-decoration:underline;">Password bhool gaye?</a></p>
+        </div>
+    </div>
+
+    <div id="mainApp" style="display:none;">
+    <div class="header">
+        <input id="shopNameInput" placeholder="Enter shop name" oninput="window.onShopNameInput(this.value)" disabled>
+    </div>
+    <div class="save-indicator" id="saveIndicator">✓ Saved</div>
+
+    <div class="stats">
+        <div><span data-key="statSale">Today's Sale</span> <span class="gold" id="todaySaleStat">Rs 0</span></div>
+        <div><span data-key="statProfit">Profit</span> <span class="green" id="todayProfitStat">Rs 0</span></div>
+        <div><span data-key="statCredit">Credit</span> <span class="red" id="totalCreditStat">Rs 0</span></div>
+    </div>
+
+    <div class="container" id="app">
+        <div class="loading-state"><div class="spinner"></div>Loading your shop data...</div>
+    </div>
+
+    <div class="tabbar">
+        <button class="tab-btn active" data-tab="sale"><span class="icon">📊</span><span data-key="tabSale">Sale</span></button>
+        <button class="tab-btn" data-tab="product"><span class="icon">📦</span><span data-key="tabProduct">Product</span></button>
+        <button class="tab-btn" data-tab="expense"><span class="icon">💳</span><span data-key="tabExpense">Expense</span></button>
+        <button class="tab-btn" data-tab="udhar"><span class="icon">🤝</span><span data-key="tabCredit">Credit</span></button>
+        <button class="tab-btn" data-tab="report"><span class="icon">📈</span><span data-key="tabReport">Report</span></button>
+        <button class="tab-btn" data-tab="settings"><span class="icon">⚙️</span><span data-key="tabSettings">Settings</span></button>
+    </div>
+
+    <div id="billModal" style="display:none;"></div>
+    </div>
+
+    <script>
+        // ============================================================
+        // Make ALL functions globally accessible
+        // ============================================================
+        window.onShopNameInput = function(val) {
+            shopName = val;
+            window.saveShopName();
+        };
+
+        // ============================================================
+        // STORAGE (persistent, cross-session storage)
+        // Tries Claude's window.storage bridge first (used only while
+        // previewing inside claude.ai). If that isn't available — which is
+        // the case once this file is saved/opened as a standalone page or
+        // added to the phone's home screen — it falls back to the browser's
+        // own localStorage, so data survives closing and reopening the app.
+        // ============================================================
+        async function storageGet(key, fallback) {
+            try {
+                if (window.storage && typeof window.storage.get === 'function') {
+                    const res = await window.storage.get(key, false);
+                    if (res && res.value !== undefined && res.value !== null) {
+                        return JSON.parse(res.value);
+                    }
+                    return fallback;
+                }
+            } catch (e) { /* fall through to localStorage */ }
+            try {
+                const raw = localStorage.getItem('shopLedger_' + key);
+                return raw !== null ? JSON.parse(raw) : fallback;
+            } catch (e2) {
+                return fallback;
+            }
+        }
+
+        async function storageSet(key, value) {
+            let saved = false;
+            try {
+                if (window.storage && typeof window.storage.set === 'function') {
+                    await window.storage.set(key, JSON.stringify(value), false);
+                    saved = true;
+                }
+            } catch (e) { /* fall through to localStorage */ }
+            if (!saved) {
+                try {
+                    localStorage.setItem('shopLedger_' + key, JSON.stringify(value));
+                    saved = true;
+                } catch (e2) {
+                    console.log('Save error:', e2);
+                }
+            }
+            if (saved) {
+                flashSaveIndicator();
+                if (!_suppressSyncPush) window.syncPushDebounced();
+                return true;
+            }
+            window.toast('⚠️ Could not save - try again');
+            return false;
+        }
+
+        function flashSaveIndicator() {
+            const el = document.getElementById('saveIndicator');
+            if (!el) return;
+            el.classList.add('show');
+            clearTimeout(window._saveIndicatorTimer);
+            window._saveIndicatorTimer = setTimeout(() => el.classList.remove('show'), 700);
+        }
+
+        window.saveProducts = () => storageSet('products', products);
+        window.saveSales = () => storageSet('sales', sales);
+        window.saveExpenses = () => storageSet('expenses', expenses);
+        window.saveUdhar = () => storageSet('udhar', udhar);
+        window.saveShopName = () => storageSet('shopName', shopName);
+        window.saveLowStockThreshold = () => storageSet('lowStockThreshold', lowStockThreshold);
+        window.saveTheme = () => storageSet('theme', currentTheme);
+        window.saveLastBackup = () => storageSet('lastBackupAt', lastBackupAt);
+        window.saveLang = () => storageSet('appLang', appLang);
+        window.saveAll = async function() {
+            await Promise.all([
+                window.saveProducts(),
+                window.saveSales(),
+                window.saveExpenses(),
+                window.saveUdhar(),
+                window.saveShopName(),
+                window.saveLowStockThreshold(),
+                window.saveTheme(),
+                window.saveLastBackup(),
+                window.saveLang()
+            ]);
+        };
+
+        // ============================================================
+        // STATE
+        // ============================================================
+        let products = [];
+        let sales = [];
+        let expenses = [];
+        let udhar = [];
+        let shopName = '';
+        let dataLoaded = false;
+        let currentTab = 'sale';
+        let selectedProduct = null;
+        let editRates = false;
+        let currentTheme = 'emerald';
+        let lastBackupAt = null;
+        let appLang = 'en';
+        let syncShopCode = '';
+        let syncEnabled = false;
+        let _syncStatus = 'idle'; // idle | connecting | synced | error
+        let _syncUnsubscribe = null;
+        let _syncPushTimer = null;
+        let _lastPushedAt = 0;
+        let _suppressSyncPush = false;
+
+        // UI vars
+        let _saleQuery = '';
+        let _saleAmount = '';
+        let _ratePurchase = null;
+        let _rateSelling = null;
+        let _focusAmount = false;
+        let _prodName = '';
+        let _prodPurchase = '';
+        let _prodSelling = '';
+        let _prodStock = '';
+        let _prodMode = 'price';
+        let _prodLotQty = '';
+        let _prodLotTotal = '';
+        let _editingProductId = null;
+        let _viewingProductId = null;
+        let _prodSearchQuery = '';
+        let lowStockThreshold = 5;
+        let _expDesc = '';
+        let _expAmount = '';
+        let _expDate = '';
+        let _udharCustomer = '';
+        let _udharAmount = '';
+        let _udharNote = '';
+        let _udharProduct = '';
+        let _udharProfit = '';
+        let _udharDropdownOpen = false;
+        let _udharSessionBillId = null;
+        let _udharCustomerSearch = '';
+        let _saleDropdownOpen = false;
+        let saleFilterDate = '';
+        let expenseFilterDate = '';
+        let reportStart = '';
+        let reportEnd = '';
+        let udharType = 'credit';
+        let _udharActiveCustomer = null;
+        let _udharStartName = '';
+        let _udharStartNote = '';
+        let _focusUdharAmount = false;
+
+        const app = document.getElementById('app');
+
+        // ============================================================
+        // HELPERS
+        // ============================================================
+        window.uid = function() {
+            return Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+        };
+
+        // ------------------------------------------------------------
+        // Custom confirm/prompt dialogs. Native confirm()/prompt() can be
+        // silently blocked (always returning false/null with no error) in
+        // sandboxed webviews, which made delete buttons look "broken" even
+        // though the delete code itself was fine. These render our own
+        // themed modal instead, so they always work everywhere, including
+        // as a home-screen PWA.
+        // ------------------------------------------------------------
+        window.confirmDialog = function(message, opts) {
+            opts = opts || {};
+            return new Promise((resolve) => {
+                const modal = document.createElement('div');
+                modal.className = 'confirm-modal';
+                modal.innerHTML = `
+                    <div class="confirm-content">
+                        <div class="confirm-msg">${window.esc(message)}</div>
+                        <div class="confirm-actions">
+                            <button class="btn btn-outline" id="_confirmCancelBtn">Cancel</button>
+                            <button class="btn ${opts.danger ? 'btn-danger' : 'btn-primary'}" id="_confirmOkBtn">${window.esc(opts.okLabel || 'Delete')}</button>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+                const cleanup = (result) => { modal.remove(); resolve(result); };
+                modal.addEventListener('click', (e) => { if (e.target === modal) cleanup(false); });
+                document.getElementById('_confirmCancelBtn').onclick = () => cleanup(false);
+                document.getElementById('_confirmOkBtn').onclick = () => cleanup(true);
+            });
+        };
+
+        window.promptDialog = function(message, defaultValue) {
+            return new Promise((resolve) => {
+                const modal = document.createElement('div');
+                modal.className = 'confirm-modal';
+                modal.innerHTML = `
+                    <div class="confirm-content">
+                        <div class="confirm-msg">${window.esc(message)}</div>
+                        <input type="number" id="_promptInput" autocomplete="off" value="${window.escAttr(defaultValue != null ? defaultValue : '')}">
+                        <div class="confirm-actions">
+                            <button class="btn btn-outline" id="_promptCancelBtn">Cancel</button>
+                            <button class="btn btn-primary" id="_promptOkBtn">OK</button>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+                const input = modal.querySelector('#_promptInput');
+                setTimeout(() => { input.focus(); input.select(); }, 50);
+                const cleanup = (result) => { modal.remove(); resolve(result); };
+                modal.addEventListener('click', (e) => { if (e.target === modal) cleanup(null); });
+                input.addEventListener('keydown', (e) => { if (e.key === 'Enter') cleanup(input.value); });
+                document.getElementById('_promptCancelBtn').onclick = () => cleanup(null);
+                document.getElementById('_promptOkBtn').onclick = () => cleanup(input.value);
+            });
+        };
+
+        // ------------------------------------------------------------
+        // Language: translates the app's main chrome (tab bar, stats
+        // bar, Settings screen). Sale/Product/Expense/Credit forms stay
+        // in the app's existing Roman Urdu/English mix, since fully
+        // translating every dynamic label across the app is a much
+        // bigger job — this covers what's visible everywhere, all the
+        // time.
+        // ------------------------------------------------------------
+        window.translations = {
+            en: {
+                tabSale: 'Sale', tabProduct: 'Product', tabExpense: 'Expense', tabCredit: 'Credit',
+                tabReport: 'Report', tabSettings: 'Settings',
+                statSale: "Today's Sale", statProfit: 'Profit', statCredit: 'Credit',
+                settingsTitle: 'Settings', themeLabel: 'Theme', languageLabel: 'Language',
+                shopNameLabel: 'Shop Name', lowStockLabel: 'Low Stock Alert (units)',
+                exportBtn: 'Export Data (backup file)', importBtn: 'Import Data',
+                deleteAllBtn: 'Delete All Data', backupTitle: 'Backup Reminder'
+            },
+            ur: {
+                tabSale: 'فروخت', tabProduct: 'مصنوعات', tabExpense: 'اخراجات', tabCredit: 'ادھار',
+                tabReport: 'رپورٹ', tabSettings: 'ترتیبات',
+                statSale: 'آج کی فروخت', statProfit: 'منافع', statCredit: 'ادھار',
+                settingsTitle: 'ترتیبات', themeLabel: 'تھیم', languageLabel: 'زبان',
+                shopNameLabel: 'دکان کا نام', lowStockLabel: 'کم اسٹاک وارننگ (یونٹس)',
+                exportBtn: '📤 ڈیٹا ایکسپورٹ کریں (بیک اپ)', importBtn: '📥 ڈیٹا امپورٹ کریں',
+                deleteAllBtn: '🗑️ تمام ڈیٹا حذف کریں', backupTitle: 'بیک اپ یاد دہانی'
+            },
+            sd: {
+                tabSale: 'وڪرو', tabProduct: 'شيون', tabExpense: 'خرچ', tabCredit: 'قرض',
+                tabReport: 'رپورٽ', tabSettings: 'سيٽنگون',
+                statSale: 'اڄ جو وڪرو', statProfit: 'منافعو', statCredit: 'قرض',
+                settingsTitle: 'سيٽنگون', themeLabel: 'ٿيم', languageLabel: 'ٻولي',
+                shopNameLabel: 'دڪان جو نالو', lowStockLabel: 'گھٽ اسٽاڪ وارننگ (يونٽ)',
+                exportBtn: '📤 ڊيٽا ايڪسپورٽ ڪريو (بيڪ اپ)', importBtn: '📥 ڊيٽا امپورٽ ڪريو',
+                deleteAllBtn: '🗑️ سڀ ڊيٽا ختم ڪريو', backupTitle: 'بيڪ اپ ياد ڏياري'
+            }
+        };
+
+        window.t = function(key) {
+            return (window.translations[appLang] && window.translations[appLang][key])
+                || window.translations.en[key] || key;
+        };
+
+        // Updates every [data-key] element on the page (tab bar, stats bar)
+        // to the active language. Settings-tab text is translated directly
+        // inside renderSettings() since that markup is rebuilt each time.
+        window.applyTranslations = function() {
+            document.querySelectorAll('[data-key]').forEach(el => {
+                el.textContent = window.t(el.getAttribute('data-key'));
+            });
+        };
+
+        window.setLang = async function(lang) {
+            if (!['en', 'ur', 'sd'].includes(lang)) return;
+            appLang = lang;
+            await window.saveLang();
+            window.applyTranslations();
+            if (currentTab === 'settings') render();
+            window.toast('🌐 Language changed');
+        };
+
+        // ============================================================
+        // MULTI-DEVICE SYNC (Firebase)
+        // A "Shop Code" is the shared key that links devices together —
+        // every device that connects with the same code reads/writes the
+        // same cloud document. Uses last-write-wins with a Promise-based
+        // chooser on first connect so the person decides which copy of
+        // their data (local vs cloud) should win, instead of silently
+        // overwriting something.
+        // ============================================================
+        window.saveSyncShopCode = () => storageSet('syncShopCode', syncShopCode);
+        window.saveSyncEnabled = () => storageSet('syncEnabled', syncEnabled);
+
+        window.generateShopCode = function() {
+            // Avoids visually confusing characters (0/O, 1/I/l).
+            const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+            let code = '';
+            for (let i = 0; i < 8; i++) code += chars[Math.floor(Math.random() * chars.length)];
+            return code;
+        };
+
+        function waitForFirebase(timeoutMs) {
+            return new Promise((resolve) => {
+                if (window.__fb) { resolve(true); return; }
+                const onReady = () => { clearTimeout(t); window.removeEventListener('firebase-ready', onReady); resolve(true); };
+                window.addEventListener('firebase-ready', onReady);
+                const t = setTimeout(() => { window.removeEventListener('firebase-ready', onReady); resolve(!!window.__fb); }, timeoutMs || 8000);
+            });
+        }
+
+        // Small 2-choice dialog (Upload / Download) used only when first
+        // connecting a device to a code that already has cloud data.
+        window.syncChooserDialog = function(message) {
+            return new Promise((resolve) => {
+                const modal = document.createElement('div');
+                modal.className = 'confirm-modal';
+                modal.innerHTML = `
+                    <div class="confirm-content">
+                        <div class="confirm-msg">${window.esc(message)}</div>
+                        <div class="confirm-actions" style="flex-direction:column;">
+                            <button class="btn btn-primary" id="_syncDownloadBtn">⬇️ Cloud Ka Data Le Aayein (is device ka data replace hoga)</button>
+                            <button class="btn btn-outline" id="_syncUploadBtn">⬆️ Is Device Ka Data Upload Karein (cloud ka data replace hoga)</button>
+                            <button class="btn btn-outline" id="_syncCancelBtn">Cancel</button>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+                const cleanup = (result) => { modal.remove(); resolve(result); };
+                modal.addEventListener('click', (e) => { if (e.target === modal) cleanup(null); });
+                document.getElementById('_syncDownloadBtn').onclick = () => cleanup('download');
+                document.getElementById('_syncUploadBtn').onclick = () => cleanup('upload');
+                document.getElementById('_syncCancelBtn').onclick = () => cleanup(null);
+            });
+        };
+
+        window.syncPushDebounced = function() {
+            if (!syncEnabled || !syncShopCode) return;
+            clearTimeout(_syncPushTimer);
+            _syncPushTimer = setTimeout(window.syncPushNow, 1200);
+        };
+
+        window.syncPushNow = async function() {
+            if (!syncEnabled || !syncShopCode || !window.__fb) return;
+            try {
+                const now = Date.now();
+                _lastPushedAt = now;
+                await window.__fb.setDoc(syncShopCode, {
+                    products, sales, expenses, udhar, shopName, lowStockThreshold,
+                    theme: currentTheme, appLang, updatedAt: now
+                });
+                _syncStatus = 'synced';
+                if (currentTab === 'settings') window.updateSyncStatusUI();
+            } catch (err) {
+                console.log('Sync push error:', err);
+                _syncStatus = 'error';
+                if (currentTab === 'settings') window.updateSyncStatusUI();
+            }
+        };
+
+        // Applies a snapshot received from the cloud to local state, saves
+        // it locally, and repaints — used both for the initial "Download"
+        // choice and for every live update from another device.
+        window.syncApplyRemote = async function(data) {
+            _suppressSyncPush = true;
+            products = Array.isArray(data.products) ? data.products : products;
+            sales = Array.isArray(data.sales) ? data.sales : sales;
+            expenses = Array.isArray(data.expenses) ? data.expenses : expenses;
+            udhar = Array.isArray(data.udhar) ? data.udhar : udhar;
+            shopName = typeof data.shopName === 'string' ? data.shopName : shopName;
+            lowStockThreshold = typeof data.lowStockThreshold === 'number' ? data.lowStockThreshold : lowStockThreshold;
+            if (data.theme) { currentTheme = data.theme; document.documentElement.setAttribute('data-theme', currentTheme); }
+            if (data.appLang) { appLang = data.appLang; window.applyTranslations(); }
+            await window.saveAll();
+            _suppressSyncPush = false;
+            window.updateStats();
+            const nameInput = document.getElementById('shopNameInput');
+            if (nameInput) nameInput.value = shopName;
+            render();
+            window.toast('🔄 Doosre device se update aaya');
+        };
+
+        window.startSyncListening = function() {
+            if (!window.__fb || !syncShopCode) return;
+            if (_syncUnsubscribe) { _syncUnsubscribe(); _syncUnsubscribe = null; }
+            _syncUnsubscribe = window.__fb.listen(syncShopCode, (data) => {
+                // Skip the echo of our own just-sent write.
+                if (data.updatedAt && data.updatedAt === _lastPushedAt) {
+                    _syncStatus = 'synced';
+                    if (currentTab === 'settings') window.updateSyncStatusUI();
+                    return;
+                }
+                window.syncApplyRemote(data);
+            }, (err) => {
+                console.log('Sync listen error:', err);
+                _syncStatus = 'error';
+                if (currentTab === 'settings') window.updateSyncStatusUI();
+            });
+        };
+
+        // First-time connect flow: checks whether this code already has
+        // cloud data and, if so, lets the person choose which copy wins.
+        window.connectSync = async function(codeInput) {
+            const code = (codeInput || '').trim().toUpperCase();
+            if (!code) { window.toast('Pehle ek Shop Code likhein ya generate karein'); return; }
+            _syncStatus = 'connecting';
+            window.updateSyncStatusUI();
+            const ready = await waitForFirebase();
+            if (!ready || !window.__fb) {
+                window.toast('⚠️ Sync service se connect nahi ho saka — internet check karein');
+                _syncStatus = 'error';
+                window.updateSyncStatusUI();
+                return;
+            }
+            syncShopCode = code;
+            try {
+                const remote = await window.__fb.getDoc(syncShopCode);
+                if (remote) {
+                    const choice = await window.syncChooserDialog(
+                        `Code "${code}" pe pehle se data mila. Kya karna chahenge?`
+                    );
+                    if (!choice) { _syncStatus = 'idle'; window.updateSyncStatusUI(); return; }
+                    if (choice === 'download') {
+                        await window.syncApplyRemote(remote);
+                    } else {
+                        await window.syncPushNow();
+                    }
+                } else {
+                    await window.syncPushNow();
+                }
+                syncEnabled = true;
+                await window.saveSyncShopCode();
+                await window.saveSyncEnabled();
+                window.startSyncListening();
+                _syncStatus = 'synced';
+                window.toast('✅ Sync ho gaya! Doosre device pe yehi code daalein');
+            } catch (err) {
+                console.log('Connect sync error:', err);
+                _syncStatus = 'error';
+                window.toast('⚠️ Connect nahi ho saka, dobara try karein');
+            }
+            if (currentTab === 'settings') render();
+        };
+
+        window.disconnectSync = async function() {
+            syncEnabled = false;
+            if (_syncUnsubscribe) { _syncUnsubscribe(); _syncUnsubscribe = null; }
+            _syncStatus = 'idle';
+            await window.saveSyncEnabled();
+            window.toast('🔌 Sync band kar diya (data yahan mehfooz hai)');
+            if (currentTab === 'settings') render();
+        };
+
+        window.copyShopCode = async function() {
+            if (!syncShopCode) return;
+            try {
+                await navigator.clipboard.writeText(syncShopCode);
+                window.toast('✅ Code copy ho gaya');
+            } catch (e) {
+                window.toast('Code: ' + syncShopCode);
+            }
+        };
+
+        // Lightweight status refresh (used instead of a full render() while
+        // a sync is in progress, so the person isn't mid-typed-out of any
+        // other field on the Settings screen).
+        window.updateSyncStatusUI = function() {
+            const el = document.getElementById('syncStatusText');
+            if (!el) return;
+            const map = {
+                idle: '⚪ Connected nahi',
+                connecting: '🟡 Connect ho raha hai...',
+                synced: '🟢 Synced',
+                error: '🔴 Error — internet check karein'
+            };
+            el.textContent = map[_syncStatus] || '';
+        };
+
+
+        window.setTheme = async function(theme) {
+            if (!['emerald', 'ocean', 'sunset', 'midnight'].includes(theme)) return;
+            currentTheme = theme;
+            document.documentElement.setAttribute('data-theme', theme);
+            const bgColors = { emerald: '#f2f7f5', ocean: '#eef6fb', sunset: '#fdf5ef', midnight: '#0b0e17' };
+            const meta = document.getElementById('themeColorMeta');
+            if (meta) meta.setAttribute('content', bgColors[theme] || '#f2f7f5');
+            await window.saveTheme();
+            if (currentTab === 'settings') render();
+            window.toast('🎨 Theme changed');
+        };
+
+        window.today = function() {
+            return new Date().toISOString().slice(0, 10);
+        };
+
+        // Money: shows whole rupees normally (Rs 100), but keeps up to 2 decimals
+        // when the amount actually has them (Rs 0.5) so small profits/prices
+        // aren't rounded away and hidden from the user.
+        window.fmt = function(n) {
+            return Number(n || 0).toLocaleString('en-PK', { maximumFractionDigits: 2 });
+        };
+
+        // Quantities: keep up to 2 decimal places (so 1.5, 2.5, 0.25 etc. show
+        // correctly instead of being rounded away like fmt() does for money).
+        window.fmtQty = function(n) {
+            const num = Number(n || 0);
+            return num.toLocaleString('en-PK', { maximumFractionDigits: 2, minimumFractionDigits: 0 });
+        };
+
+        window.esc = function(str) {
+            return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        };
+
+        window.escAttr = function(str) {
+            return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+        };
+
+        window.toast = function(msg) {
+            let t = document.querySelector('.toast');
+            if (t) t.remove();
+            t = document.createElement('div');
+            t.className = 'toast';
+            t.textContent = msg;
+            document.body.appendChild(t);
+            setTimeout(() => t.remove(), 2500);
+        };
+
+        window.updateStats = function() {
+            const d = window.today();
+            const ts = sales.filter(s => s.date === d);
+            const totalSale = ts.reduce((a, s) => a + s.amount, 0);
+            let totalProfit = ts.reduce((a, s) => a + s.profit, 0);
+            const credit = udhar.filter(u => u.type === 'credit').reduce((a, u) => a + u.amount, 0);
+            const payment = udhar.filter(u => u.type === 'payment').reduce((a, u) => a + u.amount, 0);
+            totalProfit += udhar.filter(u => u.type === 'credit' && u.date === d).reduce((a, u) => a + (u.profit || 0), 0);
+            document.getElementById('todaySaleStat').textContent = 'Rs ' + window.fmt(totalSale);
+            document.getElementById('todayProfitStat').textContent = 'Rs ' + window.fmt(totalProfit);
+            document.getElementById('totalCreditStat').textContent = 'Rs ' + window.fmt(credit - payment);
+        };
+
+        // Re-renders the app while keeping the cursor/focus in the field the
+        // person is currently typing in (fixes fields losing focus mid-type
+        // whenever a live calculation needs to redraw the screen).
+        window.rerenderPreserveFocus = function(renderFn) {
+            const active = document.activeElement;
+            const id = active && active.id;
+            let selStart = null, selEnd = null;
+            if (active && typeof active.selectionStart === 'number') {
+                selStart = active.selectionStart;
+                selEnd = active.selectionEnd;
+            }
+            renderFn();
+            if (id) {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.focus();
+                    if (selStart != null && el.setSelectionRange) {
+                        try { el.setSelectionRange(selStart, selEnd); } catch (e) {}
+                    }
+                }
+            }
+        };
+
+        window.switchTab = function(tab) {
+            currentTab = tab;
+            selectedProduct = null;
+            editRates = false;
+            _editingProductId = null;
+            _viewingProductId = null;
+            _prodSearchQuery = '';
+            _udharActiveCustomer = null;
+            render();
+        };
+
+        // ============================================================
+        // RENDER
+        // ============================================================
+        function render() {
+            if (!dataLoaded) return;
+            document.querySelectorAll('.tab-btn').forEach(b => {
+                b.classList.toggle('active', b.dataset.tab === currentTab);
+            });
+
+            if (currentTab === 'sale') renderSale();
+            else if (currentTab === 'product') renderProduct();
+            else if (currentTab === 'expense') renderExpense();
+            else if (currentTab === 'udhar') renderUdhar();
+            else if (currentTab === 'report') renderReport();
+            else renderSettings();
+        }
+
+        // ============================================================
+        // SALE TAB
+        // ============================================================
+        window.renderSale = function() {
+            const q = _saleQuery || '';
+            const filtered = q ? products.filter(p => p.name.toLowerCase().includes(q.toLowerCase())) : products;
+
+            let selPanel = '';
+            if (selectedProduct) {
+                const p = selectedProduct;
+                const rpp = _ratePurchase != null ? _ratePurchase : p.purchasePrice;
+                const rsp = _rateSelling != null ? _rateSelling : p.sellingPrice;
+                const margin = rsp > 0 ? (((rsp - rpp) / rsp) * 100) : 0;
+                const amt = parseFloat(_saleAmount);
+                const valid = !isNaN(amt) && rsp > 0;
+                const cost = valid ? amt * (rpp / rsp) : 0;
+                const profit = valid ? amt - cost : 0;
+                const estUnits = valid && rsp > 0 ? (amt / rsp) : 0;
+                const stockLine = (p.stock != null) ? `<div class="row-line"><span>Stock left</span><span class="${p.stock<=lowStockThreshold?'stock-low':''}">${window.fmtQty(p.stock)} units <span id="stockAfterVal">${valid?('→ ~'+ window.fmtQty(Math.max(p.stock-estUnits,0))+' after sale'):''}</span></span></div>` : '';
+
+                selPanel = `
+                    <div class="selected-panel">
+                        <div class="pname">${window.esc(p.name)}</div>
+                        <div class="pinfo">
+                            Purchase: <span id="purchaseVal">Rs ${window.fmt(rpp)}</span> · Selling: <span id="sellingVal">Rs ${window.fmt(rsp)}</span> · Margin: <span id="marginText">${margin.toFixed(1)}%</span>
+                            <button onclick="window.toggleEditRates()">${editRates ? 'hide' : 'change rates?'}</button>
+                        </div>
+                        ${editRates ? `
+                            <div class="grid-2">
+                                <div class="field"><label>Purchase</label><input type="number" id="ratePurchase" autocomplete="off" value="${rpp}" oninput="window.onRateInput()"></div>
+                                <div class="field"><label>Selling</label><input type="number" id="rateSelling" autocomplete="off" value="${rsp}" oninput="window.onRateInput()"></div>
+                            </div>
+                        ` : ''}
+                        <div class="field">
+                            <label>Amount (Rs)</label>
+                            <input class="amount-input" type="number" id="saleAmount" autocomplete="off" placeholder="0" value="${_saleAmount}" oninput="window.onAmountInput(this.value)">
+                        </div>
+                        <div class="row-line"><span>Cost</span><span id="costVal">Rs ${window.fmt(cost)}</span></div>
+                        <div class="row-line"><span>Profit</span><span id="profitVal" style="color:${profit>=0?'var(--green)':'var(--red)'}">Rs ${window.fmt(profit)}</span></div>
+                        ${stockLine}
+                        <div class="field"><label>Date</label><input type="date" id="saleDate" value="${window.today()}"></div>
+                        <button class="btn btn-primary" onclick="window.confirmSale()">✔ Confirm Sale</button>
+                        <button class="btn btn-outline" onclick="window.cancelSelect()">Cancel</button>
+                    </div>
+                `;
+            }
+
+            const fd = saleFilterDate || window.today();
+            const fs = sales.filter(s => s.date === fd);
+            const dayTotal = fs.reduce((a, s) => a + s.amount, 0);
+            const dayProfit = fs.reduce((a, s) => a + s.profit, 0);
+
+            const listHtml = fs.length ? fs.map(s => `
+                <div class="list-item">
+                    <div class="left">
+                        <div class="name">${window.esc(s.productName)}</div>
+                        <div class="sub">${s.date} · Rs ${window.fmt(s.amount)} @ rate Rs ${window.fmt(s.sellingRate)}</div>
+                    </div>
+                    <div class="right">
+                        <span class="${s.profit>=0?'profit-pos':'profit-neg'}">Rs ${window.fmt(s.profit)}</span>
+                        <button class="del-btn" onclick="window.deleteSale('${s.id}')">✕</button>
+                    </div>
+                </div>
+            `).join('') : '<div class="empty-state">No sales for this date</div>';
+
+            const lowStockProducts = products.filter(p => p.stock != null && p.stock <= lowStockThreshold);
+            const lowStockBanner = lowStockProducts.length ? `
+                <div class="card" style="border-color:var(--red);background:var(--red-soft);">
+                    <div class="card-title" style="color:var(--red);">⚠️ Low Stock</div>
+                    ${lowStockProducts.map(p => `<div class="row-line"><span>${window.esc(p.name)}</span><span class="stock-low">${window.fmtQty(p.stock)} left</span></div>`).join('')}
+                </div>
+            ` : '';
+
+            app.innerHTML = `
+                <div class="card">
+                    <div class="card-title">🔍 Search Product</div>
+                    <div class="search-wrap">
+                        <input class="search-input" id="saleSearchInput" autocomplete="off" placeholder="Type product name..." value="${window.escAttr(q)}"
+                            oninput="window.onSearchInput(this.value)"
+                            onfocus="window.onSearchFocus()"
+                            onblur="window.onSearchBlur()">
+                        <div class="search-dropdown" id="dropdownContainer" style="display:${_saleDropdownOpen ? 'block' : 'none'}"></div>
+                    </div>
+                    ${selPanel}
+                </div>
+                ${lowStockBanner}
+                <div class="section-label">📅 ${fd} <span style="font-weight:400;color:var(--text-dim);font-size:12px;">(Total: Rs ${window.fmt(dayTotal)} | Profit: Rs ${window.fmt(dayProfit)})</span></div>
+                <div class="card">
+                    <div class="filter-bar">
+                        <input type="date" value="${fd}" onchange="saleFilterDate=this.value;window.renderSale();">
+                        <button onclick="saleFilterDate=window.today();window.renderSale();">Today</button>
+                        <button onclick="window.handleClearDaySales('${fd}')" style="background:var(--red);color:var(--on-accent);">Clear</button>
+                    </div>
+                    <div class="scrollable">${listHtml}</div>
+                </div>
+            `;
+
+            window.updateSaleDropdown();
+
+            if (selectedProduct) {
+                const amtBox = document.getElementById('saleAmount');
+                if (amtBox && _focusAmount) {
+                    setTimeout(() => { amtBox.focus();
+                        amtBox.select(); }, 100);
+                    _focusAmount = false;
+                }
+            }
+        };
+
+        // Updates only the dropdown suggestion list in place, without
+        // touching the search <input> itself — keeps the mobile keyboard open.
+        window.updateSaleDropdown = function() {
+            const container = document.getElementById('dropdownContainer');
+            if (!container) return;
+            container.style.display = _saleDropdownOpen ? 'block' : 'none';
+            if (!_saleDropdownOpen) { container.innerHTML = ''; return; }
+            const q = _saleQuery || '';
+            const filtered = q ? products.filter(p => p.name.toLowerCase().includes(q.toLowerCase())) : products;
+            container.innerHTML = products.length === 0 ? '<div class="empty-state">Add products first</div>' :
+                filtered.length === 0 ? '<div class="empty-state">No product found</div>' :
+                filtered.map(p => `
+                    <div class="result-item" onmousedown="event.preventDefault();window.selectProduct('${p.id}')">
+                        <span>${window.esc(p.name)}${p.stock!=null?`<span class="stock-tag ${p.stock<=lowStockThreshold?'stock-low':''}">${window.fmtQty(p.stock)} in stock</span>`:''}</span>
+                        <span class="price">Rs ${window.fmt(p.sellingPrice)}</span>
+                    </div>
+                `).join('');
+        };
+
+        // Recomputes cost/profit/margin/stock-after preview and updates just
+        // those spans directly (no innerHTML rebuild), so the amount/rate
+        // input the person is typing into is never replaced mid-keystroke.
+        window.updateSaleCalc = function() {
+            if (!selectedProduct) return;
+            const p = selectedProduct;
+            const rpp = _ratePurchase != null ? _ratePurchase : p.purchasePrice;
+            const rsp = _rateSelling != null ? _rateSelling : p.sellingPrice;
+            const margin = rsp > 0 ? (((rsp - rpp) / rsp) * 100) : 0;
+            const amt = parseFloat(_saleAmount);
+            const valid = !isNaN(amt) && rsp > 0;
+            const cost = valid ? amt * (rpp / rsp) : 0;
+            const profit = valid ? amt - cost : 0;
+            const estUnits = valid && rsp > 0 ? (amt / rsp) : 0;
+
+            const set = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
+            set('purchaseVal', 'Rs ' + window.fmt(rpp));
+            set('sellingVal', 'Rs ' + window.fmt(rsp));
+            set('marginText', margin.toFixed(1) + '%');
+            set('costVal', 'Rs ' + window.fmt(cost));
+            const profitEl = document.getElementById('profitVal');
+            if (profitEl) {
+                profitEl.textContent = 'Rs ' + window.fmt(profit);
+                profitEl.style.color = profit >= 0 ? 'var(--green)' : 'var(--red)';
+            }
+            if (p.stock != null) {
+                set('stockAfterVal', valid ? ('→ ~' + window.fmtQty(Math.max(p.stock - estUnits, 0)) + ' after sale') : '');
+            }
+        };
+
+        window.onSearchInput = function(v) {
+            _saleQuery = v;
+            _saleDropdownOpen = true;
+            window.updateSaleDropdown();
+        };
+        window.onSearchFocus = function() {
+            _saleDropdownOpen = true;
+            window.updateSaleDropdown();
+        };
+        window.onSearchBlur = function() {
+            // small delay so a tap on a dropdown item still registers first
+            setTimeout(() => {
+                _saleDropdownOpen = false;
+                window.updateSaleDropdown();
+            }, 180);
+        };
+        window.onAmountInput = function(v) { _saleAmount = v;
+            window.updateSaleCalc(); };
+        window.onRateInput = function() {
+            _ratePurchase = parseFloat(document.getElementById('ratePurchase').value);
+            _rateSelling = parseFloat(document.getElementById('rateSelling').value);
+            window.updateSaleCalc();
+        };
+        window.toggleEditRates = function() { editRates = !editRates;
+            renderSale(); };
+        window.selectProduct = function(id) {
+            selectedProduct = products.find(p => p.id === id);
+            _saleAmount = '';
+            _ratePurchase = null;
+            _rateSelling = null;
+            _focusAmount = true;
+            editRates = false;
+            _saleDropdownOpen = false;
+            _saleQuery = '';
+            renderSale();
+        };
+        window.cancelSelect = function() { selectedProduct = null;
+            _saleAmount = '';
+            renderSale(); };
+        window.confirmSale = async function() {
+            if (!selectedProduct) { window.toast('Select a product');
+                return; }
+            const amt = parseFloat(document.getElementById('saleAmount').value);
+            if (isNaN(amt) || amt <= 0) { window.toast('Enter valid amount');
+                return; }
+            const p = selectedProduct;
+            const rpp = _ratePurchase != null ? _ratePurchase : p.purchasePrice;
+            const rsp = _rateSelling != null ? _rateSelling : p.sellingPrice;
+            if (rsp <= 0) { window.toast('Selling price must be > 0');
+                return; }
+            const cost = amt * (rpp / rsp);
+            const profit = amt - cost;
+            const date = document.getElementById('saleDate').value || window.today();
+            sales.push({ id: window.uid(), productId: p.id, productName: p.name, amount: amt, cost: cost, profit: profit,
+                purchaseRate: rpp, sellingRate: rsp, date: date, timestamp: Date.now() });
+
+            let stockChanged = false;
+            const prodRef = products.find(pr => pr.id === p.id);
+            if (prodRef && prodRef.stock != null) {
+                const unitsSold = amt / rsp;
+                prodRef.stock = Math.max(0, +(prodRef.stock - unitsSold).toFixed(2));
+                stockChanged = true;
+            }
+
+            await window.saveSales();
+            if (stockChanged) await window.saveProducts();
+            window.updateStats();
+            selectedProduct = null;
+            _saleAmount = '';
+            _ratePurchase = null;
+            _rateSelling = null;
+            saleFilterDate = date;
+            window.toast('✅ Sale added!');
+            render();
+        };
+        window.deleteSale = async function(id) {
+            const ok = await window.confirmDialog('Delete this sale?', { danger: true });
+            if (!ok) return;
+            sales = sales.filter(s => String(s.id) !== String(id));
+            await window.saveSales();
+            window.updateStats();
+            render();
+            window.toast('🗑️ Sale deleted');
+        };
+        window.handleClearDaySales = async function(date) {
+            const ok = await window.confirmDialog('Clear all sales for ' + date + '?', { danger: true });
+            if (ok) window.clearDaySales(date);
+        };
+        window.clearDaySales = async function(date) {
+            sales = sales.filter(s => s.date !== date);
+            await window.saveSales();
+            window.updateStats();
+            render();
+            window.toast('Cleared ' + date);
+        };
+
+        // ============================================================
+        // PRODUCT TAB
+        // ============================================================
+        // Builds the profit/margin/stock preview HTML from current field values.
+        window.buildProdPreview = function() {
+            const purchase = parseFloat(_prodPurchase);
+            const selling = parseFloat(_prodSelling);
+            const lotQty = parseFloat(_prodLotQty);
+            const lotTotal = parseFloat(_prodLotTotal);
+
+            let previewRows = '';
+            if (_prodMode === 'price') {
+                if (!isNaN(purchase) && !isNaN(selling) && selling > 0) {
+                    const margin = ((selling - purchase) / selling) * 100;
+                    const profit = selling - purchase;
+                    previewRows = `<div class="row-line"><span>Profit / unit</span><span style="color:${profit>=0?'var(--green)':'var(--red)'}">Rs ${window.fmt(profit)} (${margin.toFixed(1)}%)</span></div>`;
+                }
+            } else {
+                if (!isNaN(lotQty) && lotQty > 0 && !isNaN(lotTotal) && lotTotal >= 0) {
+                    const perUnit = lotTotal / lotQty;
+                    previewRows = `<div class="row-line"><span>Purchase price / unit</span><span>Rs ${perUnit.toFixed(2)}</span></div>`;
+                    if (!isNaN(selling) && selling > 0) {
+                        const margin = ((selling - perUnit) / selling) * 100;
+                        const profit = selling - perUnit;
+                        previewRows += `<div class="row-line"><span>Profit / unit</span><span style="color:${profit>=0?'var(--green)':'var(--red)'}">Rs ${profit.toFixed(2)} (${margin.toFixed(1)}%)</span></div>`;
+                    }
+                    previewRows += `<div class="row-line"><span>Stock added</span><span>${window.fmtQty(lotQty)} units</span></div>`;
+                }
+            }
+            return previewRows;
+        };
+
+        // Refreshes just the preview box in place — never touches the price
+        // inputs themselves, so the mobile keyboard stays open while typing.
+        window.updateProdPreview = function() {
+            const el = document.getElementById('prodPreview');
+            if (el) el.innerHTML = window.buildProdPreview();
+        };
+
+        window.renderProduct = function() {
+            // -------- Editing an existing product --------
+            if (_editingProductId) {
+                const p = products.find(pr => pr.id === _editingProductId);
+                if (!p) { _editingProductId = null; }
+                else {
+                    app.innerHTML = `
+                        <div class="card">
+                            <div class="card-title">✏️ Edit Product</div>
+                            <div class="field"><label>Product Name</label><input type="text" id="editName" autocomplete="off" value="${window.escAttr(p.name)}"></div>
+                            <div class="grid-3">
+                                <div class="field"><label>Purchase Price/unit</label><input type="number" id="editPurchase" autocomplete="off" value="${p.purchasePrice}" step="0.01"></div>
+                                <div class="field"><label>Selling Price/unit</label><input type="number" id="editSelling" autocomplete="off" value="${p.sellingPrice}" step="0.01"></div>
+                                <div class="field"><label>Stock</label><input type="number" id="editStock" autocomplete="off" value="${p.stock!=null?p.stock:''}" placeholder="—" step="0.01"></div>
+                            </div>
+                            <button class="btn btn-primary" onclick="window.saveEditProduct()">💾 Save Changes</button>
+                            <button class="btn btn-outline" onclick="_editingProductId=null;render();">Cancel</button>
+                        </div>
+                    `;
+                    return;
+                }
+            }
+
+            // -------- Viewing a product's sale history --------
+            if (_viewingProductId) {
+                const p = products.find(pr => pr.id === _viewingProductId);
+                if (!p) { _viewingProductId = null; }
+                else {
+                    const history = sales.filter(s => s.productId === p.id).sort((a, b) => b.timestamp - a.timestamp);
+                    const totalQty = history.reduce((a, s) => a + (s.sellingRate > 0 ? s.amount / s.sellingRate : 0), 0);
+                    const totalAmt = history.reduce((a, s) => a + s.amount, 0);
+                    const totalProfit = history.reduce((a, s) => a + s.profit, 0);
+
+                    // Group by the rate it was sold at, so "180 once, 190 once, 50 once" is easy to see
+                    const byRate = {};
+                    history.forEach(s => {
+                        const key = s.sellingRate;
+                        if (!byRate[key]) byRate[key] = { count: 0, amount: 0 };
+                        byRate[key].count += 1;
+                        byRate[key].amount += s.amount;
+                    });
+                    const rateRows = Object.keys(byRate).sort((a,b)=>b-a).map(rate => `
+                        <div class="row-line"><span>Rs ${window.fmt(rate)} rate</span><span>${byRate[rate].count}x · Rs ${window.fmt(byRate[rate].amount)} total</span></div>
+                    `).join('');
+
+                    app.innerHTML = `
+                        <div class="card">
+                            <div class="card-title">🧾 ${window.esc(p.name)} — Sale History</div>
+                            <div class="row-line"><span>Total Sold</span><span>Rs ${window.fmt(totalAmt)}</span></div>
+                            <div class="row-line"><span>Total Profit</span><span>Rs ${window.fmt(totalProfit)}</span></div>
+                            <div class="row-line"><span>Total Units</span><span>${window.fmtQty(totalQty)}</span></div>
+                        </div>
+                        <div class="section-label">By Rate Sold</div>
+                        <div class="card">${rateRows || '<div class="empty-state">No sales yet</div>'}</div>
+                        <div class="section-label">Every Sale</div>
+                        <div class="card scrollable">
+                            ${history.length ? history.map(s => `
+                                <div class="list-item">
+                                    <div class="left"><div class="name">Rs ${window.fmt(s.amount)}</div><div class="sub">${s.date} · rate Rs ${window.fmt(s.sellingRate)}</div></div>
+                                    <div class="right"><span class="${s.profit>=0?'profit-pos':'profit-neg'}">Rs ${window.fmt(s.profit)}</span></div>
+                                </div>
+                            `).join('') : '<div class="empty-state">No sales yet</div>'}
+                        </div>
+                        <button class="btn btn-outline" onclick="_viewingProductId=null;render();">Close</button>
+                    `;
+                    return;
+                }
+            }
+
+            const modeFields = _prodMode === 'price' ? `
+                <div class="grid-3">
+                    <div class="field"><label>Purchase Price/unit</label><input type="number" id="prodPurchase" autocomplete="off" value="${_prodPurchase}" placeholder="0" step="0.01" oninput="window.onProdFieldInput('_prodPurchase', this.value)"></div>
+                    <div class="field"><label>Selling Price/unit</label><input type="number" id="prodSelling" autocomplete="off" value="${_prodSelling}" placeholder="0" step="0.01" oninput="window.onProdFieldInput('_prodSelling', this.value)"></div>
+                    <div class="field"><label>Stock (optional)</label><input type="number" id="prodStock" autocomplete="off" value="${_prodStock}" placeholder="—" step="0.01" oninput="_prodStock=this.value"></div>
+                </div>
+            ` : `
+                <div class="grid-3">
+                    <div class="field"><label>Quantity Purchased</label><input type="number" id="prodLotQty" autocomplete="off" value="${_prodLotQty}" placeholder="e.g. 50" step="0.01" oninput="window.onProdFieldInput('_prodLotQty', this.value)"></div>
+                    <div class="field"><label>Total Purchase (Rs)</label><input type="number" id="prodLotTotal" autocomplete="off" value="${_prodLotTotal}" placeholder="e.g. 5000" step="0.01" oninput="window.onProdFieldInput('_prodLotTotal', this.value)"></div>
+                    <div class="field"><label>Selling Price/unit</label><input type="number" id="prodSelling" autocomplete="off" value="${_prodSelling}" placeholder="0" step="0.01" oninput="window.onProdFieldInput('_prodSelling', this.value)"></div>
+                </div>
+            `;
+
+            app.innerHTML = `
+                <div class="card">
+                    <div class="card-title">📦 Add Product</div>
+                    <div class="field"><label>Product Name</label><input type="text" id="prodName" autocomplete="off" value="${window.escAttr(_prodName)}" placeholder="e.g. Milk" oninput="_prodName=this.value"></div>
+                    <div class="type-toggle">
+                        <button class="${_prodMode==='price'?'active-payment':''}" onclick="window.setProdMode('price')">💰 Enter Price</button>
+                        <button class="${_prodMode==='lot'?'active-payment':''}" onclick="window.setProdMode('lot')">📦 Enter Quantity</button>
+                    </div>
+                    ${modeFields}
+                    <div id="prodPreview" style="margin-top:8px;">${window.buildProdPreview()}</div>
+                    <button class="btn btn-primary" onclick="window.addProduct()">➕ Add Product</button>
+                </div>
+                <div class="section-label">All Products (${products.length}) <span style="font-weight:400;color:var(--text-dim);font-size:11px;">search karke edit karo, ya naam tap karo history ke liye</span></div>
+                <div class="card">
+                    <input type="text" id="prodSearchInput" autocomplete="off" placeholder="🔍 Product search karein..." value="${window.escAttr(_prodSearchQuery)}" oninput="window.onProdSearchInput(this.value)">
+                    <div id="prodListContainer" style="margin-top:10px;">${window.buildProdListHtml()}</div>
+                </div>
+            `;
+        };
+
+        // Builds just the product-list HTML, filtered by the current search query.
+        window.buildProdListHtml = function() {
+            const q = (_prodSearchQuery || '').trim().toLowerCase();
+            const list = q ? products.filter(p => p.name.toLowerCase().includes(q)) : products;
+            if (products.length === 0) return '<div class="empty-state">No products</div>';
+            if (list.length === 0) return '<div class="empty-state">No product matches your search</div>';
+            return list.map(p => `
+                <div class="list-item">
+                    <div class="left" onclick="window.viewProductHistory('${p.id}')"><div class="name">${window.esc(p.name)}</div><div class="sub">Purchase: Rs ${window.fmt(p.purchasePrice)} · Selling: Rs ${window.fmt(p.sellingPrice)}${p.stock!=null?` · Stock: <span class="${p.stock<=lowStockThreshold?'stock-low':''}">${window.fmtQty(p.stock)}</span>`:''}</div></div>
+                    <div class="right">
+                        ${p.stock!=null?`<button class="restock-btn" title="Restock" onclick="window.restockProduct('${p.id}')">➕📦</button>`:''}
+                        <button class="edit-btn" title="Edit" onclick="window.editProduct('${p.id}')">✎</button>
+                        <button class="del-btn" onclick="window.deleteProduct('${p.id}')">✕</button>
+                    </div>
+                </div>
+            `).join('');
+        };
+
+        // Updates only the filtered list container in place — the search
+        // input itself is never touched, so the mobile keyboard stays open.
+        window.onProdSearchInput = function(v) {
+            _prodSearchQuery = v;
+            const el = document.getElementById('prodListContainer');
+            if (el) el.innerHTML = window.buildProdListHtml();
+        };
+
+        window.setProdMode = function(mode) {
+            _prodMode = mode;
+            render();
+        };
+
+        window.onProdFieldInput = function(varName, val) {
+            if (varName === '_prodPurchase') _prodPurchase = val;
+            else if (varName === '_prodSelling') _prodSelling = val;
+            else if (varName === '_prodLotQty') _prodLotQty = val;
+            else if (varName === '_prodLotTotal') _prodLotTotal = val;
+            window.updateProdPreview();
+        };
+
+        window.addProduct = async function() {
+            const name = document.getElementById('prodName').value.trim();
+            if (!name) { window.toast('Enter name'); return; }
+            if (products.find(p => p.name.toLowerCase() === name.toLowerCase())) { window.toast('Product exists'); return; }
+
+            let purchase, selling, stock;
+
+            if (_prodMode === 'price') {
+                purchase = parseFloat(document.getElementById('prodPurchase').value);
+                selling = parseFloat(document.getElementById('prodSelling').value);
+                const stockRaw = document.getElementById('prodStock').value;
+                stock = stockRaw === '' ? null : parseFloat(stockRaw);
+                if (isNaN(purchase) || purchase < 0) { window.toast('Valid purchase price'); return; }
+                if (isNaN(selling) || selling < 0) { window.toast('Valid selling price'); return; }
+                if (stockRaw !== '' && (isNaN(stock) || stock < 0)) { window.toast('Valid stock number'); return; }
+            } else {
+                const qty = parseFloat(document.getElementById('prodLotQty').value);
+                const total = parseFloat(document.getElementById('prodLotTotal').value);
+                selling = parseFloat(document.getElementById('prodSelling').value);
+                if (isNaN(qty) || qty <= 0) { window.toast('Enter valid quantity'); return; }
+                if (isNaN(total) || total < 0) { window.toast('Enter valid total purchase amount'); return; }
+                if (isNaN(selling) || selling < 0) { window.toast('Valid selling price'); return; }
+                purchase = total / qty;
+                stock = qty;
+            }
+
+            products.push({ id: window.uid(), name, purchasePrice: purchase, sellingPrice: selling, stock: stock });
+            await window.saveProducts();
+            _prodName = '';
+            _prodPurchase = '';
+            _prodSelling = '';
+            _prodStock = '';
+            _prodLotQty = '';
+            _prodLotTotal = '';
+            window.toast('✅ Product added!');
+            render();
+        };
+
+        window.editProduct = function(id) {
+            _editingProductId = id;
+            _viewingProductId = null;
+            render();
+        };
+
+        window.saveEditProduct = async function() {
+            const p = products.find(pr => pr.id === _editingProductId);
+            if (!p) return;
+            const name = document.getElementById('editName').value.trim();
+            const purchase = parseFloat(document.getElementById('editPurchase').value);
+            const selling = parseFloat(document.getElementById('editSelling').value);
+            const stockRaw = document.getElementById('editStock').value;
+            const stock = stockRaw === '' ? null : parseFloat(stockRaw);
+
+            if (!name) { window.toast('Enter name'); return; }
+            const dup = products.find(pr => pr.id !== p.id && pr.name.toLowerCase() === name.toLowerCase());
+            if (dup) { window.toast('Another product already has this name'); return; }
+            if (isNaN(purchase) || purchase < 0) { window.toast('Valid purchase price'); return; }
+            if (isNaN(selling) || selling < 0) { window.toast('Valid selling price'); return; }
+            if (stockRaw !== '' && (isNaN(stock) || stock < 0)) { window.toast('Valid stock number'); return; }
+
+            p.name = name;
+            p.purchasePrice = purchase;
+            p.sellingPrice = selling;
+            p.stock = stock;
+
+            // keep past sale records showing the correct product name too
+            sales.forEach(s => { if (s.productId === p.id) s.productName = name; });
+
+            await window.saveProducts();
+            await window.saveSales();
+            _editingProductId = null;
+            window.toast('✅ Product updated!');
+            render();
+        };
+
+        window.viewProductHistory = function(id) {
+            _viewingProductId = id;
+            _editingProductId = null;
+            render();
+        };
+
+        window.deleteProduct = async function(id) {
+            const ok = await window.confirmDialog('Delete this product?', { danger: true });
+            if (!ok) return;
+            products = products.filter(p => String(p.id) !== String(id));
+            await window.saveProducts();
+            render();
+            window.toast('🗑️ Product deleted');
+        };
+
+        window.restockProduct = async function(id) {
+            const p = products.find(pr => pr.id === id);
+            if (!p) return;
+            const add = await window.promptDialog('Add how many units to stock for "' + p.name + '"?', '10');
+            if (add === null) return;
+            const n = parseFloat(add);
+            if (isNaN(n) || n <= 0) { window.toast('Enter a valid number'); return; }
+            p.stock = +((p.stock || 0) + n).toFixed(2);
+            await window.saveProducts();
+            window.toast('✅ Stock updated');
+            render();
+        };
+
+        // ============================================================
+        // EXPENSE TAB
+        // ============================================================
+        window.renderExpense = function() {
+            const fd = expenseFilterDate || window.today();
+            const fe = expenses.filter(e => e.date === fd);
+            const total = fe.reduce((a, e) => a + e.amount, 0);
+
+            app.innerHTML = `
+                <div class="card">
+                    <div class="card-title">💳 Add Expense</div>
+                    <div class="field"><label>Description</label><input type="text" id="expDesc" autocomplete="off" value="${window.escAttr(_expDesc)}" placeholder="e.g. Electricity" oninput="_expDesc=this.value"></div>
+                    <div class="field"><label>Amount (Rs)</label><input type="number" id="expAmount" autocomplete="off" value="${_expAmount}" placeholder="0" oninput="_expAmount=this.value"></div>
+                    <div class="field"><label>Date</label><input type="date" id="expDate" value="${_expDate||window.today()}" oninput="_expDate=this.value"></div>
+                    <button class="btn btn-danger" onclick="window.addExpense()">➕ Add Expense</button>
+                </div>
+                <div class="section-label">📅 ${fd} <span style="font-weight:400;color:var(--text-dim);font-size:12px;">(Total: Rs ${window.fmt(total)})</span></div>
+                <div class="card">
+                    <div class="filter-bar">
+                        <input type="date" value="${fd}" onchange="expenseFilterDate=this.value;window.renderExpense();">
+                        <button onclick="expenseFilterDate=window.today();window.renderExpense();">Today</button>
+                        <button onclick="window.handleClearDayExpenses('${fd}')" style="background:var(--red);color:var(--on-accent);">Clear</button>
+                    </div>
+                    ${fe.length===0?'<div class="empty-state">No expenses</div>':
+                    fe.map(e => `
+                        <div class="list-item">
+                            <div class="left"><div class="name">${window.esc(e.description)}</div><div class="sub">${e.date}</div></div>
+                            <div class="right"><span style="color:var(--red);font-weight:700;">Rs ${window.fmt(e.amount)}</span><button class="del-btn" onclick="window.deleteExpense('${e.id}')">✕</button></div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        };
+
+        window.addExpense = async function() {
+            const desc = document.getElementById('expDesc').value.trim();
+            const amount = parseFloat(document.getElementById('expAmount').value);
+            const date = document.getElementById('expDate').value || window.today();
+            if (!desc) { window.toast('Enter description'); return; }
+            if (isNaN(amount) || amount <= 0) { window.toast('Valid amount'); return; }
+            expenses.push({ id: window.uid(), description: desc, amount, date, timestamp: Date.now() });
+            await window.saveExpenses();
+            _expDesc = '';
+            _expAmount = '';
+            _expDate = '';
+            expenseFilterDate = date;
+            window.toast('✅ Expense added!');
+            render();
+        };
+
+        window.deleteExpense = async function(id) {
+            const ok = await window.confirmDialog('Delete this expense?', { danger: true });
+            if (!ok) return;
+            expenses = expenses.filter(e => String(e.id) !== String(id));
+            await window.saveExpenses();
+            render();
+            window.toast('🗑️ Expense deleted');
+        };
+
+        window.handleClearDayExpenses = async function(date) {
+            const ok = await window.confirmDialog('Clear expenses for ' + date + '?', { danger: true });
+            if (ok) window.clearDayExpenses(date);
+        };
+
+        window.clearDayExpenses = async function(date) {
+            expenses = expenses.filter(e => e.date !== date);
+            await window.saveExpenses();
+            render();
+            window.toast('Cleared ' + date);
+        };
+
+        // ============================================================
+        // UDHAR TAB
+        // ============================================================
+        window.buildUdharCustomerListHtml = function() {
+            const custMap = {};
+            udhar.forEach(u => {
+                if (!custMap[u.customer]) custMap[u.customer] = { credit: 0, payment: 0 };
+                if (u.type === 'credit') custMap[u.customer].credit += u.amount;
+                else custMap[u.customer].payment += u.amount;
+            });
+            const q = (_udharCustomerSearch || '').trim().toLowerCase();
+            const allNames = Object.keys(custMap).sort();
+            const filteredNames = q ? allNames.filter(n => n.toLowerCase().includes(q)) : allNames;
+            if (!filteredNames.length) return `<div class="empty-state">${q ? 'Koi customer nahi mila' : 'Abhi koi customer nahi'}</div>`;
+            return filteredNames.map(name => {
+                const c = custMap[name];
+                const bal = c.credit - c.payment;
+                return `
+                    <div class="customer-row" style="cursor:default;">
+                        <span class="cname" style="cursor:pointer;flex:1;" onclick="window.openUdharCustomer('${window.escAttr(name)}')">${window.esc(name)}</span>
+                        <span class="cbal" style="color:${bal>=0?'var(--red)':'var(--green)'};margin-right:8px;cursor:pointer;" onclick="window.openUdharCustomer('${window.escAttr(name)}')">${bal>=0?'+':''}Rs ${window.fmt(Math.abs(bal))}</span>
+                        ${bal > 0 ? `<button class="restock-btn" title="Receive Payment" onclick="event.stopPropagation();window.quickReceivePayment('${window.escAttr(name)}')">💰</button>` : ''}
+                    </div>
+                `;
+            }).join('');
+        };
+
+        // Updates only the filtered customer list container — the search
+        // input itself is never touched, so the mobile keyboard stays open.
+        window.onUdharCustomerSearch = function(v) {
+            _udharCustomerSearch = v;
+            const el = document.getElementById('udharCustomerListContainer');
+            if (el) el.innerHTML = window.buildUdharCustomerListHtml();
+        };
+
+        // Lets you record a payment for a customer directly from the list,
+        // without opening their full item-entry page — handy for quick
+        // credit recovery.
+        window.quickReceivePayment = async function(name) {
+            const amt = await window.promptDialog('Kitni raqam mil gayi "' + name + '" se?', '');
+            if (amt === null) return;
+            const amount = parseFloat(amt);
+            if (isNaN(amount) || amount <= 0) { window.toast('Sahi amount likhein'); return; }
+            udhar.push({ id: window.uid(), customer: name, product: 'General', amount, type: 'payment', note: '',
+                cost: 0, profit: 0, date: window.today(), timestamp: Date.now(), billId: null });
+            await window.saveUdhar();
+            window.updateStats();
+            window.toast('✅ Payment record hogayi!');
+            render();
+        };
+
+        window.renderUdhar = function() {
+            // If a customer's item-entry page is open, show that instead.
+            if (_udharActiveCustomer) { window.renderUdharActive(); return; }
+
+            const custMap = {};
+            udhar.forEach(u => {
+                if (!custMap[u.customer]) custMap[u.customer] = { credit: 0, payment: 0 };
+                if (u.type === 'credit') custMap[u.customer].credit += u.amount;
+                else custMap[u.customer].payment += u.amount;
+            });
+            const net = Object.values(custMap).reduce((a, c) => a + (c.credit - c.payment), 0);
+
+            app.innerHTML = `
+                <div class="card">
+                    <div class="card-title">🤝 Naya Udhar Shuru Karein</div>
+                    <div class="field"><label>Customer ka Naam</label><input type="text" id="udharStartName" autocomplete="off" value="${window.escAttr(_udharStartName)}" placeholder="Customer name likhein" oninput="_udharStartName=this.value" list="custList"><datalist id="custList">${Object.keys(custMap).map(c => `<option value="${window.escAttr(c)}">`).join('')}</datalist></div>
+                    <div class="field"><label>Kaam / Wajah (optional)</label><input type="text" id="udharStartNote" autocomplete="off" value="${window.escAttr(_udharStartNote)}" placeholder="e.g. Ration udhar" oninput="_udharStartNote=this.value"></div>
+                    <button class="btn btn-danger" onclick="window.startUdharCustomer()">➕ Save aur Items Add Karein</button>
+                </div>
+                <div class="section-label">Customers <span style="font-weight:400;color:var(--text-dim);font-size:12px;">(Net: Rs ${window.fmt(net)})</span></div>
+                <div class="card">
+                    <input type="text" id="udharCustomerSearch" autocomplete="off" placeholder="🔍 Search customer by name..." value="${window.escAttr(_udharCustomerSearch)}" oninput="window.onUdharCustomerSearch(this.value)" style="margin-bottom:10px;">
+                    <div class="scrollable" id="udharCustomerListContainer">${window.buildUdharCustomerListHtml()}</div>
+                </div>
+            `;
+        };
+
+        // Opens (or creates) the dedicated item-entry page for a customer.
+        window.startUdharCustomer = function() {
+            const nameBox = document.getElementById('udharStartName');
+            const name = nameBox.value.trim();
+            if (!name) { window.toast('Customer ka naam likhein'); return; }
+            _udharActiveCustomer = name;
+            _udharPendingStartNote = document.getElementById('udharStartNote').value.trim();
+            _udharStartName = '';
+            _udharStartNote = '';
+            _udharProduct = '';
+            _udharAmount = '';
+            _udharProfit = '';
+            _udharNote = _udharPendingStartNote || '';
+            udharType = 'credit';
+            _udharSessionBillId = window.uid();
+            render();
+        };
+
+        window.openUdharCustomer = function(name) {
+            _udharActiveCustomer = name;
+            _udharProduct = '';
+            _udharAmount = '';
+            _udharProfit = '';
+            _udharNote = '';
+            udharType = 'credit';
+            _udharSessionBillId = window.uid();
+            render();
+        };
+
+        // The dedicated "alag page" — keep entering product + price and each
+        // one is added to the system immediately, without retyping the customer.
+        window.renderUdharActive = function() {
+            const name = _udharActiveCustomer;
+            const entries = udhar.filter(u => u.customer === name).sort((a, b) => b.timestamp - a.timestamp);
+            const credit = entries.filter(u => u.type === 'credit').reduce((a, u) => a + u.amount, 0);
+            const payment = entries.filter(u => u.type === 'payment').reduce((a, u) => a + u.amount, 0);
+            const bal = credit - payment;
+
+            app.innerHTML = `
+                <div class="card">
+                    <div class="card-title">🧾 ${window.esc(name)} <span style="font-size:12px;font-weight:400;color:${bal>=0?'var(--red)':'var(--green)'}">(Balance: Rs ${window.fmt(Math.abs(bal))} ${bal>=0?'due':'over'})</span></div>
+                    <div class="type-toggle">
+                        <button class="${udharType==='credit'?'active-credit':''}" onclick="udharType='credit';window.renderUdharActive();">🔴 Udhar Item</button>
+                        <button class="${udharType==='payment'?'active-payment':''}" onclick="udharType='payment';window.renderUdharActive();">🟢 Payment Mila</button>
+                    </div>
+                    ${udharType === 'credit' ? `
+                    <div class="field"><label>Product</label>
+                        <div class="search-wrap">
+                            <input type="text" id="udharProductSearch" autocomplete="off" placeholder="Product search karein ya naya naam likhein"
+                                value="${window.escAttr(_udharProduct)}"
+                                oninput="window.onUdharProductInput(this.value)"
+                                onfocus="window.onUdharProductFocus()"
+                                onblur="window.onUdharProductBlur()">
+                            <div class="search-dropdown" id="udharProductDropdown" style="display:${_udharDropdownOpen ? 'block' : 'none'}"></div>
+                        </div>
+                    </div>
+                    <div class="field"><label>Price / Amount (Rs)</label><input class="amount-input" type="number" id="udharAmount" autocomplete="off" placeholder="0" value="${_udharAmount}" oninput="_udharAmount=this.value;window.suggestUdharProfit();"></div>
+                    <div class="field"><label>Profit (Rs) — product select karne par auto aa jayega, chahein to khud badal lein</label><input type="number" id="udharProfit" autocomplete="off" placeholder="0" value="${_udharProfit}" oninput="_udharProfit=this.value"></div>
+                    <div class="field"><label>Note (optional)</label><input type="text" id="udharNote" autocomplete="off" value="${window.escAttr(_udharNote)}" placeholder="Optional" oninput="_udharNote=this.value"></div>
+                    <button class="btn btn-danger" onclick="window.addUdharItem()">➕ Item Add Karein</button>
+                    ` : `
+                    <div class="field"><label>Amount Received (Rs)</label><input class="amount-input" type="number" id="udharAmount" autocomplete="off" placeholder="0" value="${_udharAmount}" oninput="_udharAmount=this.value"></div>
+                    <div class="field"><label>Note (optional)</label><input type="text" id="udharNote" autocomplete="off" value="${window.escAttr(_udharNote)}" placeholder="Optional" oninput="_udharNote=this.value"></div>
+                    ${bal > 0 ? `<button class="btn btn-outline" onclick="window.receiveFullBalance()">💰 Poora Balance Receive Karein (Rs ${window.fmt(bal)})</button>` : ''}
+                    <button class="btn btn-success" onclick="window.addUdharItem()">✅ Payment Add Karein</button>
+                    `}
+                </div>
+                <div class="section-label">Ab Tak Add Hue Items (${entries.length})</div>
+                ${(() => {
+                    const latestCredit = entries.find(e => e.type === 'credit');
+                    return latestCredit ? `<button class="btn btn-primary" onclick="window.generateBill('${latestCredit.id}')">🧾 Poora Bill Print/Share Karein (Sab Items)</button>` : '';
+                })()}
+                <div class="card scrollable">
+                    ${entries.length ? entries.map(e => `
+                        <div class="list-item">
+                            <div class="left"><div class="name">${e.type==='credit'?'🔴':'🟢'} ${window.esc(e.product||'General')}</div><div class="sub">${e.date}${e.note?(' · '+window.esc(e.note)):''}${(e.type==='credit' && e.profit) ? (' · Profit Rs '+window.fmt(e.profit)) : ''}</div></div>
+                            <div class="right"><span style="font-weight:700;color:${e.type==='credit'?'var(--red)':'var(--green)'}">Rs ${window.fmt(e.amount)}</span><button class="bill-btn" onclick="window.generateBill('${e.id}')">🧾</button><button class="del-btn" onclick="window.deleteUdhar('${e.id}')">✕</button></div>
+                        </div>
+                    `).join('') : '<div class="empty-state">Koi item nahi — upar se product aur price add karein</div>'}
+                </div>
+                <button class="btn btn-outline" onclick="_udharActiveCustomer=null;render();">✔ Done — List par wapas jayein</button>
+            `;
+            const amtBox = document.getElementById('udharAmount');
+            if (amtBox && _focusUdharAmount) {
+                setTimeout(() => { amtBox.focus(); amtBox.select(); }, 100);
+                _focusUdharAmount = false;
+            }
+        };
+
+        // ------------------------------------------------------------
+        // Udhar product search (same searchable pattern as the Sale tab)
+        // instead of a plain <select>, since a shop can easily have
+        // 200-300+ products and a native dropdown becomes unusable.
+        // ------------------------------------------------------------
+        window.onUdharProductInput = function(v) {
+            _udharProduct = v;
+            _udharDropdownOpen = true;
+            window.updateUdharProductDropdown();
+            window.suggestUdharProfit();
+        };
+        window.onUdharProductFocus = function() {
+            _udharDropdownOpen = true;
+            window.updateUdharProductDropdown();
+        };
+        window.onUdharProductBlur = function() {
+            setTimeout(() => { _udharDropdownOpen = false; window.updateUdharProductDropdown(); }, 180);
+        };
+        window.updateUdharProductDropdown = function() {
+            const container = document.getElementById('udharProductDropdown');
+            if (!container) return;
+            container.style.display = _udharDropdownOpen ? 'block' : 'none';
+            if (!_udharDropdownOpen) { container.innerHTML = ''; return; }
+            const q = (_udharProduct || '').trim().toLowerCase();
+            const filtered = q ? products.filter(p => p.name.toLowerCase().includes(q)) : products;
+            container.innerHTML = products.length === 0 ? '<div class="empty-state">Pehle Product tab se items add karein</div>' :
+                filtered.length === 0 ? '<div class="empty-state">Match nahi mila — yehi naam save ho jayega (naya/general item)</div>' :
+                filtered.slice(0, 60).map(p => `
+                    <div class="result-item" onmousedown="event.preventDefault();window.selectUdharProduct('${p.id}')">
+                        <span>${window.esc(p.name)}${p.stock!=null?`<span class="stock-tag ${p.stock<=lowStockThreshold?'stock-low':''}">${window.fmtQty(p.stock)} in stock</span>`:''}</span>
+                        <span class="price">Rs ${window.fmt(p.sellingPrice)}</span>
+                    </div>
+                `).join('');
+        };
+        window.selectUdharProduct = function(id) {
+            const p = products.find(pr => pr.id === id);
+            if (!p) return;
+            _udharProduct = p.name;
+            _udharDropdownOpen = false;
+            const box = document.getElementById('udharProductSearch');
+            if (box) box.value = p.name;
+            window.updateUdharProductDropdown();
+            window.suggestUdharProfit();
+        };
+
+        // One-tap way to settle a customer's whole outstanding balance,
+        // instead of having to look up and type the exact amount.
+        window.receiveFullBalance = function() {
+            const entries = udhar.filter(u => u.customer === _udharActiveCustomer);
+            const credit = entries.filter(u => u.type === 'credit').reduce((a, u) => a + u.amount, 0);
+            const payment = entries.filter(u => u.type === 'payment').reduce((a, u) => a + u.amount, 0);
+            const bal = credit - payment;
+            if (bal <= 0) return;
+            _udharAmount = String(bal);
+            const amtBox = document.getElementById('udharAmount');
+            if (amtBox) amtBox.value = _udharAmount;
+        };
+
+        // Auto-fills the Profit field from the matched product's margin whenever
+        // the product or amount changes, but only if the person hasn't already
+        // typed their own profit value for this entry.
+        window.suggestUdharProfit = function() {
+            if (udharType !== 'credit') return;
+            const amountField = document.getElementById('udharAmount');
+            const profitField = document.getElementById('udharProfit');
+            if (!amountField || !profitField) return;
+            const product = (_udharProduct || '').trim();
+            const amount = parseFloat(amountField.value);
+            const matched = products.find(pr => pr.name === product);
+            if (matched && matched.sellingPrice > 0 && !isNaN(amount) && amount > 0) {
+                const cost = amount * (matched.purchasePrice / matched.sellingPrice);
+                const suggested = +(amount - cost).toFixed(2);
+                _udharProfit = String(suggested);
+                profitField.value = _udharProfit;
+            }
+        };
+
+        window.addUdharItem = async function() {
+            const product = (_udharProduct || '').trim();
+            const amount = parseFloat(document.getElementById('udharAmount').value);
+            const note = document.getElementById('udharNote').value.trim();
+            if (isNaN(amount) || amount <= 0) { window.toast('Sahi amount likhein'); return; }
+
+            let cost = 0, profit = 0, matchedProduct = null;
+            if (udharType === 'credit' && product) {
+                matchedProduct = products.find(pr => pr.name === product);
+                if (matchedProduct && matchedProduct.sellingPrice > 0) {
+                    cost = amount * (matchedProduct.purchasePrice / matchedProduct.sellingPrice);
+                    profit = amount - cost;
+                }
+                // Manually entered/edited Profit field always wins, since the
+                // shopkeeper may sell a custom/general item that has no exact
+                // match in inventory — that's why profit could go uncounted before.
+                const profitFieldEl = document.getElementById('udharProfit');
+                if (profitFieldEl && profitFieldEl.value !== '') {
+                    const manualProfit = parseFloat(profitFieldEl.value);
+                    if (!isNaN(manualProfit)) {
+                        profit = manualProfit;
+                        cost = amount - profit;
+                    }
+                }
+            }
+
+            udhar.push({ id: window.uid(), customer: _udharActiveCustomer, product: product || 'General', amount, type: udharType, note: note || '',
+                cost: cost, profit: profit, date: window.today(), timestamp: Date.now(),
+                billId: udharType === 'credit' ? (_udharSessionBillId || (_udharSessionBillId = window.uid())) : null });
+
+            let stockChanged = false;
+            if (udharType === 'credit' && matchedProduct && matchedProduct.stock != null && matchedProduct.sellingPrice > 0) {
+                const unitsSold = amount / matchedProduct.sellingPrice;
+                matchedProduct.stock = Math.max(0, +(matchedProduct.stock - unitsSold).toFixed(2));
+                stockChanged = true;
+            }
+
+            await window.saveUdhar();
+            if (stockChanged) await window.saveProducts();
+            _udharAmount = '';
+            _udharProduct = '';
+            _udharNote = '';
+            _udharProfit = '';
+            _focusUdharAmount = true;
+            window.updateStats();
+            window.toast(udharType === 'credit' ? '✅ Item add hogaya!' : '✅ Payment add hogayi!');
+            render();
+        };
+
+        window.deleteUdhar = async function(id) {
+            const ok = await window.confirmDialog('Delete this entry?', { danger: true });
+            if (!ok) return;
+            udhar = udhar.filter(u => String(u.id) !== String(id));
+            await window.saveUdhar();
+            window.updateStats();
+            render();
+            window.toast('🗑️ Entry deleted');
+        };
+
+        // ============================================================
+        // BILL
+        // ============================================================
+        window.generateBill = function(id) {
+            const entry = udhar.find(u => u.id === id);
+            if (!entry) { window.toast('Not found'); return; }
+            let items = [entry];
+            if (entry.type === 'credit' && entry.billId) {
+                items = udhar.filter(u => u.type === 'credit' && u.billId === entry.billId && u.customer === entry.customer);
+                items.sort((a, b) => a.timestamp - b.timestamp);
+            }
+            const total = items.reduce((a, u) => a + u.amount, 0);
+            const itemRows = items.length > 1 ? items.map(it => `
+                <div class="bill-row"><span>${window.esc(it.product || 'N/A')}${it.note ? (' (' + window.esc(it.note) + ')') : ''}</span><span>Rs ${window.fmt(it.amount)}</span></div>
+            `).join('') : `
+                <div class="bill-row"><span>Product</span><span>${window.esc(entry.product || 'N/A')}</span></div>
+                ${entry.note ? `<div class="bill-row"><span>Note</span><span>${window.esc(entry.note)}</span></div>` : ''}
+            `;
+            const modal = document.getElementById('billModal');
+            modal.style.display = 'flex';
+            modal.innerHTML = `
+                <div class="bill-modal" onclick="if(event.target===this)window.closeBill()">
+                    <div class="bill-content">
+                        <div class="bill-header"><h2>${window.esc(shopName||'My Shop')}</h2><p>${entry.date} · ${entry.type==='credit'?'Credit Bill':'Payment Receipt'}</p></div>
+                        <div class="bill-row"><span>Customer</span><span><strong>${window.esc(entry.customer)}</strong></span></div>
+                        <div class="bill-row"><span>Type</span><span>${entry.type==='credit'?'🔴 Credit':'🟢 Payment'}</span></div>
+                        ${itemRows}
+                        <div class="bill-row total"><span>Total</span><span>Rs ${window.fmt(total)}</span></div>
+                        <div style="text-align:center;font-size:10px;color:var(--text-dim);margin-top:8px;">#${entry.id.slice(0,8)} · ${new Date().toLocaleString()}</div>
+                        <div class="bill-actions">
+                            <button class="btn btn-primary" onclick="window.print()">🖨️ Print</button>
+                            <button class="btn btn-success" onclick="window.shareBillText('${entry.id}')">📤 Share</button>
+                            <button class="btn btn-outline" onclick="window.closeBill()">Close</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        };
+
+        window.shareBillText = async function(id) {
+            const entry = udhar.find(u => u.id === id);
+            if (!entry) return;
+            let items = [entry];
+            if (entry.type === 'credit' && entry.billId) {
+                items = udhar.filter(u => u.type === 'credit' && u.billId === entry.billId && u.customer === entry.customer);
+                items.sort((a, b) => a.timestamp - b.timestamp);
+            }
+            const total = items.reduce((a, u) => a + u.amount, 0);
+            const itemLines = items.length > 1
+                ? items.map(it => `${it.product || 'N/A'}${it.note ? (' (' + it.note + ')') : ''}: Rs ${window.fmt(it.amount)}`).join('\n')
+                : `Product: ${entry.product || 'N/A'}\n${entry.note ? ('Note: ' + entry.note + '\n') : ''}`;
+            const text = `🧾 ${shopName || 'My Shop'}\n${entry.date} · ${entry.type==='credit'?'Credit':'Payment'}\nCustomer: ${entry.customer}\n${itemLines}\nTotal: Rs ${window.fmt(total)}`;
+            try {
+                if (navigator.share) {
+                    await navigator.share({ text });
+                    return;
+                }
+            } catch (e) { /* fall through to clipboard */ }
+            try {
+                await navigator.clipboard.writeText(text);
+                window.toast('✅ Copied - paste in WhatsApp');
+            } catch (e) {
+                window.toast('⚠️ Could not share');
+            }
+        };
+
+        window.closeBill = function() {
+            document.getElementById('billModal').style.display = 'none';
+            document.getElementById('billModal').innerHTML = '';
+        };
+
+        // ============================================================
+        // REPORT TAB
+        // ============================================================
+        window.renderReport = function() {
+            const start = reportStart || (sales.length ? sales.reduce((a, s) => a < s.date ? a : s.date, window.today()) :
+            window.today());
+            const end = reportEnd || window.today();
+
+            const fs = sales.filter(s => s.date >= start && s.date <= end);
+            const fe = expenses.filter(e => e.date >= start && e.date <= end);
+            const fu = udhar.filter(u => u.type === 'credit' && u.date >= start && u.date <= end);
+
+            const totalSales = fs.reduce((a, s) => a + s.amount, 0) + fu.reduce((a, u) => a + u.amount, 0);
+            const totalProfit = fs.reduce((a, s) => a + s.profit, 0) + fu.reduce((a, u) => a + (u.profit || 0), 0);
+            const totalExp = fe.reduce((a, e) => a + e.amount, 0);
+            const net = totalProfit - totalExp;
+
+            const daily = {};
+            fs.forEach(s => {
+                if (!daily[s.date]) daily[s.date] = { sales: 0, profit: 0, count: 0 };
+                daily[s.date].sales += s.amount;
+                daily[s.date].profit += s.profit;
+                daily[s.date].count += 1;
+            });
+            fu.forEach(u => {
+                if (!daily[u.date]) daily[u.date] = { sales: 0, profit: 0, count: 0 };
+                daily[u.date].sales += u.amount;
+                daily[u.date].profit += (u.profit || 0);
+                daily[u.date].count += 1;
+            });
+            fe.forEach(e => {
+                if (!daily[e.date]) daily[e.date] = { sales: 0, profit: 0, exp: 0, count: 0 };
+                if (!daily[e.date].exp) daily[e.date].exp = 0;
+                daily[e.date].exp += e.amount;
+            });
+
+            const dailyHtml = Object.keys(daily).sort().map(date => {
+                const d = daily[date];
+                const n = (d.profit || 0) - (d.exp || 0);
+                return `
+                    <div class="list-item">
+                        <div class="left"><div class="name">${date}</div><div class="sub">${d.count||0} sales · Profit: Rs ${window.fmt(d.profit||0)}</div></div>
+                        <div class="right"><span style="font-weight:700;color:${n>=0?'var(--green)':'var(--red)'}">${n>=0?'+':''}Rs ${window.fmt(n)}</span></div>
+                    </div>
+                `;
+            }).join('');
+
+            const byProduct = {};
+            fs.forEach(s => {
+                if (!byProduct[s.productName]) byProduct[s.productName] = { amount: 0, profit: 0, count: 0, rates: {} };
+                byProduct[s.productName].amount += s.amount;
+                byProduct[s.productName].profit += s.profit;
+                byProduct[s.productName].count += 1;
+                const rk = s.sellingRate;
+                byProduct[s.productName].rates[rk] = (byProduct[s.productName].rates[rk] || 0) + 1;
+            });
+            fu.forEach(u => {
+                const pname = u.product || 'General';
+                if (!byProduct[pname]) byProduct[pname] = { amount: 0, profit: 0, count: 0, rates: {} };
+                byProduct[pname].amount += u.amount;
+                byProduct[pname].profit += (u.profit || 0);
+                byProduct[pname].count += 1;
+            });
+            const topProducts = Object.entries(byProduct)
+                .sort((a, b) => b[1].amount - a[1].amount)
+                .slice(0, 5);
+
+            const topHtml = topProducts.length ? topProducts.map(([name, d], i) => {
+                const rateBreakdown = Object.keys(d.rates).sort((a,b)=>b-a).map(r => `Rs ${window.fmt(r)} ×${d.rates[r]}`).join(', ');
+                return `
+                <div class="list-item">
+                    <div class="left"><div class="name"><span class="rank-badge">${i+1}</span>${window.esc(name)}</div><div class="sub">${d.count} sales · Profit: Rs ${window.fmt(d.profit)}</div><div class="sub">Rates: ${rateBreakdown}</div></div>
+                    <div class="right"><span style="font-weight:700;color:var(--gold);">Rs ${window.fmt(d.amount)}</span></div>
+                </div>
+            `;}).join('') : '<div class="empty-state">No sales in this range</div>';
+
+            app.innerHTML = `
+                <div class="card">
+                    <div class="card-title">📈 Report</div>
+                    <div class="date-range">
+                        <input type="date" value="${start}" onchange="reportStart=this.value;window.renderReport();">
+                        <span style="color:var(--text-dim);">to</span>
+                        <input type="date" value="${end}" onchange="reportEnd=this.value;window.renderReport();">
+                        <button onclick="reportStart='';reportEnd='';window.renderReport();">All</button>
+                    </div>
+                    <div class="summary-grid">
+                        <div class="stat-card gold"><div class="label">Total Sales</div><div class="value">Rs ${window.fmt(totalSales)}</div></div>
+                        <div class="stat-card green"><div class="label">Total Profit</div><div class="value">Rs ${window.fmt(totalProfit)}</div></div>
+                        <div class="stat-card red"><div class="label">Total Expenses</div><div class="value">Rs ${window.fmt(totalExp)}</div></div>
+                        <div class="stat-card ${net>=0?'green':'red'}"><div class="label">Net Earning</div><div class="value">${net>=0?'+':''}Rs ${window.fmt(net)}</div></div>
+                    </div>
+                </div>
+                <div class="section-label">🏆 Top Selling Products <span style="font-weight:400;color:var(--text-dim);font-size:11px;">(with rate breakdown)</span></div>
+                <div class="card">${topHtml}</div>
+                <div class="section-label">📅 Daily Summary</div>
+                <div class="card">${dailyHtml||'<div class="empty-state">No data</div>'}</div>
+            `;
+        };
+
+        // ============================================================
+        // SETTINGS TAB
+        // ============================================================
+        window.renderSettings = function() {
+            const themes = [
+                { id: 'emerald', label: 'Emerald', dot1: '#12a37e', dot2: '#0e3832', dot3: '#f2f7f5' },
+                { id: 'ocean', label: 'Ocean', dot1: '#1f8fd6', dot2: '#0e3852', dot3: '#eef6fb' },
+                { id: 'sunset', label: 'Sunset', dot1: '#e0663d', dot2: '#4a2a1c', dot3: '#fdf5ef' },
+                { id: 'midnight', label: 'Midnight', dot1: '#d9ad4f', dot2: '#f3f5f9', dot3: '#12172a' }
+            ];
+            const themeSwatches = themes.map(t => `
+                <button onclick="window.setTheme('${t.id}')" style="flex:1;min-width:70px;padding:10px 6px;border-radius:var(--radius-sm);cursor:pointer;font-family:inherit;font-weight:700;font-size:11px;background:${t.dot3};border:2px solid ${currentTheme===t.id ? t.dot1 : 'transparent'};color:${t.dot2};display:flex;flex-direction:column;align-items:center;gap:6px;">
+                    <span style="display:flex;gap:3px;">
+                        <span style="width:14px;height:14px;border-radius:50%;background:${t.dot1};display:inline-block;"></span>
+                    </span>
+                    ${t.label}${currentTheme===t.id ? ' ✓' : ''}
+                </button>
+            `).join('');
+            const langs = [
+                { id: 'en', label: 'English' },
+                { id: 'ur', label: 'اردو' },
+                { id: 'sd', label: 'سنڌي' }
+            ];
+            const langSwatches = langs.map(l => `
+                <button onclick="window.setLang('${l.id}')" style="flex:1;min-width:70px;padding:10px 6px;border-radius:var(--radius-sm);cursor:pointer;font-family:inherit;font-weight:700;font-size:13px;background:${appLang===l.id ? 'var(--gold-soft)' : 'var(--surface)'};border:2px solid ${appLang===l.id ? 'var(--gold)' : 'transparent'};color:var(--text);">
+                    ${l.label}${appLang===l.id ? ' ✓' : ''}
+                </button>
+            `).join('');
+            const lastBackupDays = lastBackupAt ? Math.floor((Date.now() - new Date(lastBackupAt).getTime()) / 86400000) : null;
+            const backupWarning = (lastBackupDays === null || lastBackupDays > 7) ? `
+                <div class="card" style="border-color:var(--red);background:var(--red-soft);">
+                    <div class="card-title" style="color:var(--red);">⚠️ ${window.t('backupTitle')}</div>
+                    <p style="font-size:12px;color:var(--text-dim);">${lastBackupDays === null ? 'Aapne kabhi backup export nahi kiya.' : `Aakhri backup ${lastBackupDays} din pehle liya tha.`} Phone kharab ho ya app delete ho jaye to data na kho, isliye "Export Data" zaroor karein.</p>
+                </div>
+            ` : '';
+            const syncStatusMap = {
+                idle: '⚪ Connected nahi',
+                connecting: '🟡 Connect ho raha hai...',
+                synced: '🟢 Synced',
+                error: '🔴 Error — internet check karein'
+            };
+            const syncCard = syncEnabled && syncShopCode ? `
+                <div class="card">
+                    <div class="card-title">🔗 Multi-Device Sync</div>
+                    <p style="font-size:12px;color:var(--text-dim);margin-bottom:10px;" id="syncStatusText">${syncStatusMap[_syncStatus] || ''}</p>
+                    <div class="field"><label>Aapka Shop Code (doosre device pe yehi daalein)</label>
+                        <div style="display:flex;gap:8px;align-items:center;">
+                            <input type="text" value="${window.escAttr(syncShopCode)}" readonly style="font-weight:700;letter-spacing:2px;text-align:center;">
+                            <button class="btn btn-outline btn-small" onclick="window.copyShopCode()">📋 Copy</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline" onclick="window.disconnectSync()">🔌 Sync Band Karein</button>
+                </div>
+            ` : `
+                <div class="card">
+                    <div class="card-title">🔗 Multi-Device Sync</div>
+                    <p style="font-size:12px;color:var(--text-dim);margin-bottom:10px;">Ek "Shop Code" banayein aur wahi code doosre phone/computer pe daal kar dono devices ko jodein — data automatically dono taraf update hoga (internet chahiye).</p>
+                    <div class="field"><label>Shop Code</label>
+                        <div style="display:flex;gap:8px;">
+                            <input type="text" id="syncCodeInput" autocomplete="off" placeholder="e.g. AB3D9F2K" style="font-weight:700;letter-spacing:2px;text-align:center;text-transform:uppercase;">
+                            <button class="btn btn-outline btn-small" onclick="document.getElementById('syncCodeInput').value=window.generateShopCode();">🎲 New</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="window.connectSync(document.getElementById('syncCodeInput').value)">🔗 Connect Karein</button>
+                </div>
+            `;
+            app.innerHTML = `
+                <div class="card">
+                    <div class="card-title">🎨 ${window.t('themeLabel')}</div>
+                    <div style="display:flex;gap:8px;flex-wrap:wrap;">${themeSwatches}</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">🌐 ${window.t('languageLabel')}</div>
+                    <div style="display:flex;gap:8px;flex-wrap:wrap;">${langSwatches}</div>
+                </div>
+                ${syncCard}
+                ${backupWarning}
+                <div class="card">
+                    <div class="card-title">⚙️ ${window.t('settingsTitle')}</div>
+                    <div class="field"><label>${window.t('shopNameLabel')}</label><input type="text" id="settingsShopName" value="${window.escAttr(shopName)}" onchange="window.onShopNameInput(this.value)"></div>
+                    <div class="field"><label>${window.t('lowStockLabel')} (kam ho to warning dikhayein)</label><input type="number" id="settingsLowStock" value="${lowStockThreshold}" min="0" step="1" onchange="window.onLowStockChange(this.value)"></div>
+                    <button class="btn btn-primary" onclick="window.exportData()">${window.t('exportBtn')}</button>
+                    <button class="btn btn-outline" onclick="document.getElementById('importFile').click();">${window.t('importBtn')}</button>
+                    <input type="file" id="importFile" accept=".json" style="display:none" onchange="window.importData(event)">
+                    <button class="btn btn-danger" onclick="window.handleClearAll()">${window.t('deleteAllBtn')}</button>
+                    <button class="btn btn-outline" onclick="window.signOutUser()">🚪 Sign Out</button>
+                    <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border);font-size:11px;color:var(--text-dim);">
+                        <p>Products: ${products.length}</p>
+                        <p>Sales: ${sales.length}</p>
+                        <p>Expenses: ${expenses.length}</p>
+                        <p>Credit Entries: ${udhar.length}</p>
+                        <p style="margin-top:6px;">${lastBackupAt ? `Last backup: ${lastBackupDays === 0 ? 'Today' : lastBackupDays + ' din pehle'}` : 'Data is saved automatically and stays available next time you open this app.'}</p>
+                        <p style="margin-top:6px;">💡 Tip: Export data se hafta-vaar backup banate rahein, taake phone kharab ho ya app delete ho jaye to data safe rahe.</p>
+                    </div>
+                </div>
+            `;
+        };
+
+        window.onLowStockChange = async function(val) {
+            const n = parseFloat(val);
+            if (isNaN(n) || n < 0) { window.toast('Sahi number likhein'); render(); return; }
+            lowStockThreshold = n;
+            await window.saveLowStockThreshold();
+            window.toast('✅ Low stock alert updated');
+        };
+
+        window.exportData = async function() {
+            try {
+                const data = { products, sales, expenses, udhar, shopName, exportedAt: new Date().toISOString() };
+                const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `shop_ledger_${window.today()}.json`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                lastBackupAt = new Date().toISOString();
+                await window.saveLastBackup();
+                window.toast('✅ Exported!');
+                if (currentTab === 'settings') render();
+            } catch (e) { window.toast('❌ Export failed'); }
+        };
+
+        window.importData = function(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = async function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    if (data.products) products = data.products;
+                    if (data.sales) sales = data.sales;
+                    if (data.expenses) expenses = data.expenses;
+                    if (data.udhar) udhar = data.udhar;
+                    if (data.shopName) shopName = data.shopName;
+                    await window.saveAll();
+                    document.getElementById('shopNameInput').value = shopName;
+                    window.updateStats();
+                    window.toast('✅ Imported!');
+                    render();
+                } catch (err) { window.toast('❌ Invalid file'); }
+            };
+            reader.readAsText(file);
+            event.target.value = '';
+        };
+
+        window.handleClearAll = async function() {
+            const ok = await window.confirmDialog('Delete ALL data? Products, sales, expenses aur credit — sab mit jayega. Yeh wapas nahi ho sakta.', { danger: true, okLabel: 'Delete All' });
+            if (ok) window.clearAll();
+        };
+
+        window.clearAll = async function() {
+            products = [];
+            sales = [];
+            expenses = [];
+            udhar = [];
+            await window.saveAll();
+            window.updateStats();
+            window.toast('All cleared');
+            render();
+        };
+
+        // ============================================================
+        // TAB CLICKS
+        // ============================================================
+        document.querySelectorAll('.tab-btn').forEach(b => {
+            b.addEventListener('click', function() {
+                window.switchTab(this.dataset.tab);
+            });
+        });
+
+        // Bill modal close on outside click
+        document.getElementById('billModal').addEventListener('click', function(e) {
+            if (e.target === this) window.closeBill();
+        });
+
+        // ============================================================
+        // INIT
+        // ============================================================
+        async function init() {
+            try {
+                const [p, s, e, u, sn, lst, th, lba, lg, sc, se] = await Promise.all([
+                    storageGet('products', []),
+                    storageGet('sales', []),
+                    storageGet('expenses', []),
+                    storageGet('udhar', []),
+                    storageGet('shopName', ''),
+                    storageGet('lowStockThreshold', 5),
+                    storageGet('theme', 'emerald'),
+                    storageGet('lastBackupAt', null),
+                    storageGet('appLang', 'en'),
+                    storageGet('syncShopCode', ''),
+                    storageGet('syncEnabled', false)
+                ]);
+                products = Array.isArray(p) ? p : [];
+                sales = Array.isArray(s) ? s : [];
+                expenses = Array.isArray(e) ? e : [];
+                udhar = Array.isArray(u) ? u : [];
+                shopName = typeof sn === 'string' ? sn : '';
+                lowStockThreshold = (typeof lst === 'number' && lst >= 0) ? lst : 5;
+                currentTheme = ['emerald', 'ocean', 'sunset', 'midnight'].includes(th) ? th : 'emerald';
+                lastBackupAt = typeof lba === 'string' ? lba : null;
+                appLang = ['en', 'ur', 'sd'].includes(lg) ? lg : 'en';
+                syncShopCode = typeof sc === 'string' ? sc : '';
+                syncEnabled = !!se;
+            } catch (err) {
+                console.log('Load error:', err);
+                window.toast('⚠️ Could not load saved data, starting fresh');
+            }
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            const bgColors = { emerald: '#f2f7f5', ocean: '#eef6fb', sunset: '#fdf5ef', midnight: '#0b0e17' };
+            const themeMeta = document.getElementById('themeColorMeta');
+            if (themeMeta) themeMeta.setAttribute('content', bgColors[currentTheme] || '#f2f7f5');
+            window.applyTranslations();
+            dataLoaded = true;
+            const nameInput = document.getElementById('shopNameInput');
+            nameInput.value = shopName;
+            nameInput.disabled = false;
+            window.updateStats();
+            render();
+            if (syncEnabled && syncShopCode) {
+                waitForFirebase().then((ready) => {
+                    if (ready && window.__fb) {
+                        _syncStatus = 'synced';
+                        window.startSyncListening();
+                        if (currentTab === 'settings') window.updateSyncStatusUI();
+                    }
+                });
+            }
+            console.log('✅ Shop Ledger loaded successfully!');
+            console.log('Products:', products.length, 'Sales:', sales.length, 'Expenses:', expenses.length, 'Udhar:', udhar.length);
+        }
+
+        // ============================================================
+        // AUTH (login gate)
+        // ============================================================
+        let _isSignUpMode = false;
+        let _appStarted = false;
+
+        window.toggleLoginMode = function() {
+            _isSignUpMode = !_isSignUpMode;
+            document.getElementById('loginTitle').textContent = _isSignUpMode ? 'Shop Ledger — Account Banayein' : 'Shop Ledger — Sign In';
+            document.getElementById('loginSubmitBtn').textContent = _isSignUpMode ? 'Account Banayein' : 'Sign In';
+            document.getElementById('loginModeText').textContent = _isSignUpMode ? 'Pehle se account hai?' : 'Pehli baar use kar rahe hain?';
+            document.getElementById('loginModeLink').textContent = _isSignUpMode ? 'Sign In Karein' : 'Account Banayein';
+            document.getElementById('loginError').textContent = '';
+        };
+
+        window.handleLogin = async function() {
+            const email = document.getElementById('loginEmail').value.trim();
+            const password = document.getElementById('loginPassword').value;
+            const errEl = document.getElementById('loginError');
+            errEl.textContent = '';
+            if (!email || !password) { errEl.textContent = 'Email aur password dono likhein'; return; }
+            if (password.length < 6) { errEl.textContent = 'Password kam se kam 6 characters ka ho'; return; }
+            const btn = document.getElementById('loginSubmitBtn');
+            btn.disabled = true;
+            btn.textContent = 'Please wait...';
+            try {
+                const ready = await waitForFirebase();
+                if (!ready || !window.__fb) throw new Error('offline');
+                if (_isSignUpMode) {
+                    await window.__fb.signUp(email, password);
+                } else {
+                    await window.__fb.signIn(email, password);
+                }
+                // onAuthChange listener below handles showing the app.
+            } catch (err) {
+                console.log('Auth error:', err);
+                const code = (err && err.code) || '';
+                const messages = {
+                    'auth/email-already-in-use': 'Yeh email pehle se registered hai — Sign In karein',
+                    'auth/invalid-email': 'Email sahi format mein likhein',
+                    'auth/weak-password': 'Password kam se kam 6 characters ka ho',
+                    'auth/user-not-found': 'Account nahi mila — pehle account banayein',
+                    'auth/wrong-password': 'Password galat hai',
+                    'auth/invalid-credential': 'Email ya password galat hai',
+                    'auth/too-many-requests': 'Bohot koshishein ho gayeen — thodi der baad try karein'
+                };
+                errEl.textContent = messages[code] || (code === '' ? 'Internet check karein' : 'Kuch masla hua, dobara try karein');
+            }
+            btn.disabled = false;
+            btn.textContent = _isSignUpMode ? 'Account Banayein' : 'Sign In';
+        };
+
+        window.handleForgotPassword = async function() {
+            const email = document.getElementById('loginEmail').value.trim();
+            if (!email) { document.getElementById('loginError').textContent = 'Pehle apni email likhein, phir yeh link dabayein'; return; }
+            try {
+                const ready = await waitForFirebase();
+                if (!ready || !window.__fb) throw new Error('offline');
+                await window.__fb.resetPassword(email);
+                window.toast('✅ Password reset link email pe bhej diya');
+            } catch (err) {
+                document.getElementById('loginError').textContent = 'Email bhejne mein masla hua — email sahi check karein';
+            }
+        };
+
+        window.signOutUser = async function() {
+            const ok = await window.confirmDialog('Sign out karein?');
+            if (!ok) return;
+            try {
+                if (_syncUnsubscribe) { _syncUnsubscribe(); _syncUnsubscribe = null; }
+                await window.__fb.signOut();
+            } catch (err) { console.log('Sign out error:', err); }
+        };
+
+        // Waits for Firebase to load, then watches auth state: shows the
+        // login screen when signed out, and reveals the app + loads data
+        // only once signed in. This is the single entry point instead of
+        // an unconditional init() call.
+        (async function bootstrapAuth() {
+            const ready = await waitForFirebase(10000);
+            if (!ready || !window.__fb) {
+                // No internet / Firebase unreachable on first load — let the
+                // person in anyway so the app still works offline, since all
+                // data is local-first regardless of login.
+                document.getElementById('loginScreen').style.display = 'none';
+                document.getElementById('mainApp').style.display = 'block';
+                if (!_appStarted) { _appStarted = true; init(); }
+                return;
+            }
+            window.__fb.onAuthChange((user) => {
+                if (user) {
+                    document.getElementById('loginScreen').style.display = 'none';
+                    document.getElementById('mainApp').style.display = 'block';
+                    if (!_appStarted) { _appStarted = true; init(); }
+                } else {
+                    document.getElementById('loginScreen').style.display = 'flex';
+                    document.getElementById('mainApp').style.display = 'none';
+                }
+            });
+        })();
+    </script>
+
+    <!-- ============================================================
+         MULTI-DEVICE SYNC (Firebase)
+         Loaded as a separate module script (ES imports require type=
+         module) and bridged to the main app via window.__fb, so the
+         rest of the app can stay a plain classic script.
+         ============================================================ -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getFirestore, doc, setDoc, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBcj7-QpeRyfwpIYuJq3qRqixrxZgmBF60",
+            authDomain: "najeeb-sshop.firebaseapp.com",
+            projectId: "najeeb-sshop",
+            storageBucket: "najeeb-sshop.firebasestorage.app",
+            messagingSenderId: "1066878370002",
+            appId: "1:1066878370002:web:edc7503c8c6ae8f99c6d0b"
+        };
+
+        try {
+            const fbApp = initializeApp(firebaseConfig);
+            const db = getFirestore(fbApp);
+            const auth = getAuth(fbApp);
+
+            window.__fb = {
+                setDoc: (shopCode, data) => setDoc(doc(db, 'shops', shopCode), data),
+                getDoc: async (shopCode) => {
+                    const snap = await getDoc(doc(db, 'shops', shopCode));
+                    return snap.exists() ? snap.data() : null;
+                },
+                listen: (shopCode, onData, onError) => onSnapshot(
+                    doc(db, 'shops', shopCode),
+                    (snap) => { if (snap.exists()) onData(snap.data()); },
+                    (err) => { if (onError) onError(err); }
+                ),
+                signUp: (email, password) => createUserWithEmailAndPassword(auth, email, password),
+                signIn: (email, password) => signInWithEmailAndPassword(auth, email, password),
+                signOut: () => signOut(auth),
+                resetPassword: (email) => sendPasswordResetEmail(auth, email),
+                onAuthChange: (cb) => onAuthStateChanged(auth, cb)
+            };
+            window.dispatchEvent(new Event('firebase-ready'));
+        } catch (err) {
+            console.log('Firebase init failed:', err);
+        }
+    </script>
+</body>
+</html>
